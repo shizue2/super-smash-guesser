@@ -1,0 +1,88 @@
+name,company,series,initial_release_year,gender,range_type
+Mario,Nintendo,Super Mario,1981,Male,Close-range
+Donkey Kong,Nintendo,Donkey Kong,1981,Male,Mid-range
+Link,Nintendo,The Legend of Zelda,1986,Male,Mid-range
+Samus,Nintendo,Metroid,1986,Female,Long-range
+Yoshi,Nintendo,Yoshi,1990,Male,Close-range
+Kirby,Nintendo,Kirby,1992,Male,Close-range
+Fox,Nintendo,Star Fox,1993,Male,Long-range
+Pikachu,Nintendo,Pokémon,1996,Varies,Mid-range
+Luigi,Nintendo,Super Mario,1983,Male,Close-range
+Ness,Nintendo,EarthBound,1994,Male,Mid-range
+Captain Falcon,Nintendo,F-Zero,1990,Male,Close-range
+Jigglypuff,Nintendo,Pokémon,1996,Varies,Close-range
+Peach,Nintendo,Super Mario,1985,Female,Close-range
+Daisy,Nintendo,Super Mario,1989,Female,Close-range
+Bowser,Nintendo,Super Mario,1985,Male,Close-range
+Ice Climbers,Nintendo,Ice Climber,1985,Varies,Close-range
+Sheik,Nintendo,The Legend of Zelda,1998,Female,Close-range
+Zelda,Nintendo,The Legend of Zelda,1986,Female,Mid-range
+Dr. Mario,Nintendo,Dr. Mario,1990,Male,Close-range
+Pichu,Nintendo,Pokémon,2000,Varies,Mid-range
+Falco,Nintendo,Star Fox,1997,Male,Long-range
+Marth,Nintendo,Fire Emblem,1990,Male,Close-range
+Lucina,Nintendo,Fire Emblem,2012,Female,Close-range
+Young Link,Nintendo,The Legend of Zelda,2000,Male,Mid-range
+Ganondorf,Nintendo,The Legend of Zelda,1998,Male,Close-range
+Mewtwo,Nintendo,Pokémon,1996,Varies,Mid-range
+Roy,Nintendo,Fire Emblem,2002,Male,Close-range
+Chrom,Nintendo,Fire Emblem,2012,Male,Close-range
+Mr. Game & Watch,Nintendo,Game & Watch,1980,Varies,Mid-range
+Meta Knight,Nintendo,Kirby,1993,Male,Close-range
+Pit,Nintendo,Kid Icarus,1986,Male,Mid-range
+Dark Pit,Nintendo,Kid Icarus,2012,Male,Mid-range
+Zero Suit Samus,Nintendo,Metroid,2004,Female,Mid-range
+Wario,Nintendo,Wario,1992,Male,Close-range
+Snake,Konami,Metal Gear,1987,Male,Long-range
+Ike,Nintendo,Fire Emblem,2005,Male,Close-range
+Pokemon Trainer,Nintendo,Pokémon,1996,Varies,Mid-range
+Diddy Kong,Nintendo,Donkey Kong,1994,Male,Close-range
+Lucas,Nintendo,Mother,2006,Male,Mid-range
+Sonic,Sega,Sonic the Hedgehog,1991,Male,Close-range
+King Dedede,Nintendo,Kirby,1992,Male,Close-range
+Olimar,Nintendo,Pikmin,2001,Male,Mid-range
+Lucario,Nintendo,Pokémon,2006,Varies,Mid-range
+R.O.B.,Nintendo,R.O.B.,1985,Varies,Mid-range
+Toon Link,Nintendo,The Legend of Zelda,2002,Male,Mid-range
+Wolf,Nintendo,Star Fox,1997,Male,Mid-range
+Villager,Nintendo,Animal Crossing,2001,Varies,Close-range
+Mega Man,Capcom,Mega Man,1987,Male,Long-range
+Wii Fit Trainer,Nintendo,Wii Fit,2007,Varies,Close-range
+Rosalina & Luma,Nintendo,Super Mario,2007,Female,Mid-range
+Little Mac,Nintendo,Punch-Out!!,1983,Male,Close-range
+Greninja,Nintendo,Pokémon,2013,Varies,Close-range
+Mii Brawler,Nintendo,Mii,2006,Varies,Close-range
+Mii Swordfighter,Nintendo,Mii,2006,Varies,Mid-range
+Mii Gunner,Nintendo,Mii,2006,Varies,Long-range
+Palutena,Nintendo,Kid Icarus,1986,Female,Mid-range
+Pac-Man,Bandai Namco,Pac-Man,1980,Male,Mid-range
+Robin,Nintendo,Fire Emblem,2012,Varies,Mid-range
+Shulk,Nintendo,Xenoblade Chronicles,2010,Male,Mid-range
+Bowser Jr.,Nintendo,Super Mario,2002,Male,Close-range
+Duck Hunt,Nintendo,Duck Hunt,1984,Varies,Long-range
+Ryu,Capcom,Street Fighter,1987,Male,Close-range
+Ken,Capcom,Street Fighter,1987,Male,Close-range
+Cloud,Square Enix,Final Fantasy,1997,Male,Mid-range
+Corrin,Nintendo,Fire Emblem,2015,Varies,Close-range
+Bayonetta,PlatinumGames,Bayonetta,2009,Female,Close-range
+Inkling,Nintendo,Splatoon,2015,Varies,Close-range
+Ridley,Nintendo,Metroid,1986,Male,Close-range
+Simon Belmont,Konami,Castlevania,1986,Male,Mid-range
+Richter,Konami,Castlevania,1993,Male,Mid-range
+King K. Rool,Nintendo,Donkey Kong,1994,Male,Close-range
+Isabelle,Nintendo,Animal Crossing,2012,Female,Mid-range
+Incineroar,Nintendo,Pokémon,2016,Varies,Close-range
+Piranha Plant,Nintendo,Super Mario,1985,Varies,Close-range
+Joker,Atlus,Persona,2016,Male,Mid-range
+Hero,Square Enix,Dragon Quest,1986,Varies,Mid-range
+Banjo & Kazooie,Microsoft,Banjo-Kazooie,1998,Varies,Close-range
+TerryBogard,SNK,Fatal Fury,1991,Male,Close-range
+Byleth,Nintendo,Fire Emblem,2019,Varies,Mid-range
+Min Min,Nintendo,ARMS,2017,Female,Mid-range
+Steve,Microsoft,Minecraft,2009,Varies,Mid-range
+Alex,Microsoft,Minecraft,2014,Varies,Mid-range
+Sephiroth,Square Enix,Final Fantasy,1997,Male,Mid-range
+Pyra,Nintendo,Xenoblade Chronicles,2017,Female,Close-range
+Mythra,Nintendo,Xenoblade Chronicles,2017,Female,Mid-range
+Kazuya Mishima,Bandai Namco,Tekken,1994,Male,Close-range
+Sora,Square Enix,Kingdom Hearts,2002,Male,Close-range
