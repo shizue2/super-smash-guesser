@@ -9,8 +9,11 @@ jobs:
       name: github-pages
       url: ${{ steps.build-publish.outputs.page_url }}
     runs-on: ubuntu-latest
+    permissions:
+      id-token: write
+      contents: read
     steps:
       - id: build-publish
         uses: bitovi/github-actions-react-to-ghp@v1.2.0
         with:
-          path: build 
+          path: build
