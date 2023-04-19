@@ -12,6 +12,7 @@ function App() {
   const rows = Array.from(Array(NUM_ATTEMPS).keys());
   const cols = Array.from(Array(Object.keys(ATTRIBUTES).length).keys());
 
+  const [isCorrect, Correct] = useState(false);
   const [guesses, setGuesses] = useState([]);
   const [selection, setSelection] = useState(0);
   const answer = useMemo(() => {
@@ -22,10 +23,20 @@ function App() {
 
   function handleGuess() {
     setGuesses((prev) => {
-      return [...(prev || []), { selectionIndex: selection }];
+      return [...prev, { selectionIndex: selection }];
     });
     if (selection == answer) {
-      window.alert("You guessed correctly! Answer:" + CHARACTERS[answer]?.name);
+      Correct(true);
+    }
+  }
+
+  function release_year_comparison(year) {
+    if (year > CHARACTERS[answer]?.[ATTRIBUTES.INITIAL_RELEASE]) {
+      return year + " ↑"; 
+    } else if (year < CHARACTERS[answer]?.[ATTRIBUTES.INITIAL_RELEASE]) {
+      return year + " ↓"; 
+    } else {
+      return year;
     }
   }
 
@@ -57,15 +68,17 @@ function App() {
                     ? "green"
                     : "red"
                   : "";
-                return (
-                  <div className={`square ${additionalClassName}`} key={col}>
-                    {
-                      CHARACTERS[guesses[row]?.selectionIndex]?.[
-                        ATTRIBUTE_INDEX[col]
-                      ]
-                    }
-                  </div>
-                );
+                  const value =
+                  ATTRIBUTE_INDEX[col] === ATTRIBUTES.INITIAL_RELEASE && answered
+                    ? release_year_comparison(
+                        CHARACTERS[guesses[row]?.selectionIndex]?.[ATTRIBUTE_INDEX[col]]
+                      )
+                    : CHARACTERS[guesses[row]?.selectionIndex]?.[ATTRIBUTE_INDEX[col]];
+                    return (
+                      <div className={`square ${additionalClassName}`} key={col}>
+                        {value}
+                      </div>
+                    );
               })}
             </div>
           ))}
@@ -86,6 +99,11 @@ function App() {
             Make Guess
           </button>
         </div>
+        {isCorrect && (
+        <div className="answer_display">
+          Correct answer: {CHARACTERS[answer]?.name}
+        </div>
+      )}
       </div>
     </div>
   );

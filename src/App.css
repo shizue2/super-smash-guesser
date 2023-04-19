@@ -49,7 +49,7 @@ p {
   background: white;
   border: 3px lightgrey solid;
   font-size: 14px;
-  color:white;
+  color:black;
   margin: 5px;
   display: flex;
   align-items: center;
@@ -62,4 +62,14 @@ p {
 
 .green {
   background: #6cb965;
+}
+
+.answer_display {
+  border: 2px rgba(242, 182, 29, 0.605) solid;
+  margin: 5px;
+  padding: 5px;
+  font-size: 18px;
+
+  color: green;
+
 }
