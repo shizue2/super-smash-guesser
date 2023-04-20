@@ -1,5 +1,5 @@
 export const ATTRIBUTES = {
-  CHARACTER: "CHARACTER",
+  NAME: "name",
   COMPANY: "company",
   SERIES: "series",
   INITIAL_RELEASE: "initial_release_year",
@@ -8,7 +8,7 @@ export const ATTRIBUTES = {
 };
 
 export const ATTRIBUTE_LABELS = {
-  [ATTRIBUTES.CHARACTER]: "Character",
+  [ATTRIBUTES.NAME]: "Character",
   [ATTRIBUTES.COMPANY]: "Company",
   [ATTRIBUTES.SERIES]: "Series",
   [ATTRIBUTES.INITIAL_RELEASE]: "Release Year",
@@ -17,7 +17,7 @@ export const ATTRIBUTE_LABELS = {
 };
 
 export const ATTRIBUTE_INDEX = {
-  0: ATTRIBUTES.CHARACTER,
+  0: ATTRIBUTES.NAME,
   1: ATTRIBUTES.COMPANY,
   2: ATTRIBUTES.SERIES,
   3: ATTRIBUTES.INITIAL_RELEASE,

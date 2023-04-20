@@ -12,7 +12,7 @@ function App() {
   const rows = Array.from(Array(NUM_ATTEMPS).keys());
   const cols = Array.from(Array(Object.keys(ATTRIBUTES).length).keys());
 
-  const [isCorrect, Correct] = useState(false);
+  const [isCorrect, setIsCorrect] = useState(false);
   const [guesses, setGuesses] = useState([]);
   const [selection, setSelection] = useState(0);
   const answer = useMemo(() => {
@@ -26,15 +26,15 @@ function App() {
       return [...prev, { selectionIndex: selection }];
     });
     if (selection == answer) {
-      Correct(true);
+      setIsCorrect(true);
     } else if (guesses.length + 1 >= NUM_ATTEMPS)
-      Correct(false);
+      setIsCorrect(false);
   }
 
   function release_year_comparison(year) {
-    if (year > CHARACTERS[answer]?.[ATTRIBUTES.INITIAL_RELEASE]) {
+    if (year < CHARACTERS[answer]?.[ATTRIBUTES.INITIAL_RELEASE]) {
       return year + " ↑"; 
-    } else if (year < CHARACTERS[answer]?.[ATTRIBUTES.INITIAL_RELEASE]) {
+    } else if (year > CHARACTERS[answer]?.[ATTRIBUTES.INITIAL_RELEASE]) {
       return year + " ↓"; 
     } else {
       return year;
