@@ -7,6 +7,7 @@ import {
 } from "./const/attributes";
 import { CHARACTERS } from "./const/characters";
 import { NUM_ATTEMPS } from "./const/settings";
+import { Select, Space, Button } from "antd";
 
 function App() {
   const rows = Array.from(Array(NUM_ATTEMPS).keys());
@@ -27,15 +28,14 @@ function App() {
     });
     if (selection == answer) {
       setIsCorrect(true);
-    } else if (guesses.length + 1 >= NUM_ATTEMPS)
-      setIsCorrect(false);
+    } else if (guesses.length + 1 >= NUM_ATTEMPS) setIsCorrect(false);
   }
 
   function release_year_comparison(year) {
     if (year < CHARACTERS[answer]?.[ATTRIBUTES.INITIAL_RELEASE]) {
-      return year + " ↑"; 
+      return year + " ↑";
     } else if (year > CHARACTERS[answer]?.[ATTRIBUTES.INITIAL_RELEASE]) {
-      return year + " ↓"; 
+      return year + " ↓";
     } else {
       return year;
     }
@@ -69,46 +69,64 @@ function App() {
                     ? "green"
                     : "red"
                   : "";
-                  const value =
-                  ATTRIBUTE_INDEX[col] === ATTRIBUTES.INITIAL_RELEASE && answered
+                const value =
+                  ATTRIBUTE_INDEX[col] === ATTRIBUTES.INITIAL_RELEASE &&
+                  answered
                     ? release_year_comparison(
-                        CHARACTERS[guesses[row]?.selectionIndex]?.[ATTRIBUTE_INDEX[col]]
+                        CHARACTERS[guesses[row]?.selectionIndex]?.[
+                          ATTRIBUTE_INDEX[col]
+                        ]
                       )
-                    : CHARACTERS[guesses[row]?.selectionIndex]?.[ATTRIBUTE_INDEX[col]];
-                    return (
-                      <div className={`square ${additionalClassName}`} key={col}>
-                        {value}
-                      </div>
-                    );
+                    : CHARACTERS[guesses[row]?.selectionIndex]?.[
+                        ATTRIBUTE_INDEX[col]
+                      ];
+                return (
+                  <div className={`square ${additionalClassName}`} key={col}>
+                    {value}
+                  </div>
+                );
               })}
             </div>
           ))}
         </div>
         <div className="row">
-          <select
-            id="characters"
-            name="characters"
-            onChange={(e) => setSelection(e.target.value)}
+          <Select
+            showSearch
+            onChange={setSelection}
+            style={{ width: 240 }}
+            filterOption={(input, option) => {
+              console.log({ input, option });
+              return (option?.label ?? "")
+                .toLowerCase()
+                .includes(input.toLowerCase());
+            }}
+            optionLabelProp="label"
           >
-            {CHARACTERS.map((character, i) => (
-              <option value={i} key={i}>
-                {character.name}
-              </option>
-            ))}
-          </select>
-          <button type="button" onClick={handleGuess} disabled={isCorrect}>
+            {CHARACTERS.map((character, i) => {
+              return (
+                <Select.Option key={i} value={i} label={character[ATTRIBUTES.NAME]}>
+                  <Space>
+                    <span role="img" aria-label="China">
+                      👾
+                    </span>
+                    {character[ATTRIBUTES.NAME]}
+                  </Space>
+                </Select.Option>
+              );
+            })}
+          </Select>
+
+          <Button type="primary" onClick={handleGuess} disabled={isCorrect}>
             Make Guess
-          </button>
+          </Button>
         </div>
         {isCorrect ? (
-          <div className="correct_answer">
-            Congrats!
-          </div>
-      ) : guesses.length >= NUM_ATTEMPS ? (
+          <div className="correct_answer">Congrats!</div>
+        ) : guesses.length >= NUM_ATTEMPS ? (
           <div className="wrong_answer">
             Sorry, the correct answer was {CHARACTERS[answer]?.name}.
           </div>
-      ) : null}
+        ) : null}
       </div>
     </div>
   );
