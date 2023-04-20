@@ -27,7 +27,8 @@ function App() {
     });
     if (selection == answer) {
       Correct(true);
-    }
+    } else if (guesses.length + 1 >= NUM_ATTEMPS)
+      Correct(false);
   }
 
   function release_year_comparison(year) {
@@ -95,15 +96,19 @@ function App() {
               </option>
             ))}
           </select>
-          <button type="button" onClick={handleGuess}>
+          <button type="button" onClick={handleGuess} disabled={isCorrect}>
             Make Guess
           </button>
         </div>
-        {isCorrect && (
-        <div className="answer_display">
-          Correct answer: {CHARACTERS[answer]?.name}
-        </div>
-      )}
+        {isCorrect ? (
+          <div className="correct_answer">
+            Congrats!
+          </div>
+      ) : guesses.length >= NUM_ATTEMPS ? (
+          <div className="wrong_answer">
+            Sorry, the correct answer was {CHARACTERS[answer]?.name}.
+          </div>
+      ) : null}
       </div>
     </div>
   );

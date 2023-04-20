@@ -33,10 +33,11 @@ p {
 .row {
   display: flex;
   direction: row;
+  align-items: center;
 }
 
 .attribute {
-  width: 100px;
+  width: 80px;
   background: white;
   border: 3px white solid;
   font-size: 14px;
@@ -44,8 +45,8 @@ p {
 }
 
 .square {
-  width: 100px;
-  height: 100px;
+  width: 85px;
+  height: 85px;
   background: white;
   border: 3px lightgrey solid;
   font-size: 14px;
@@ -62,14 +63,4 @@ p {
 
 .green {
   background: #6cb965;
-}
-
-.answer_display {
-  border: 2px rgba(242, 182, 29, 0.605) solid;
-  margin: 5px;
-  padding: 5px;
-  font-size: 18px;
-
-  color: green;
-
 }
