@@ -93,6 +93,7 @@ function App() {
           <Select
             showSearch
             onChange={setSelection}
+            defaultValue={0}
             style={{ width: 240 }}
             filterOption={(input, option) => {
               console.log({ input, option });
@@ -104,7 +105,11 @@ function App() {
           >
             {CHARACTERS.map((character, i) => {
               return (
-                <Select.Option key={i} value={i} label={character[ATTRIBUTES.NAME]}>
+                <Select.Option
+                  key={i}
+                  value={i}
+                  label={character[ATTRIBUTES.NAME]}
+                >
                   <Space>
                     <span role="img" aria-label="China">
                       👾
