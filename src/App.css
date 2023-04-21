@@ -73,3 +73,8 @@ p {
 .character-option{
   align-items:end;
 }
+
+.character-image-column{
+  width: 90px;
+  height: 90px;
+}

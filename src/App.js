@@ -8,6 +8,7 @@ import {
 } from "./const/attributes";
 import { CHARACTERS } from "./const/characters";
 import { NUM_ATTEMPS } from "./const/settings";
+import { releaseYearFunction } from "./utils/releaseYearFunction";
 
 function App() {
   const rows = Array.from(Array(NUM_ATTEMPS).keys());
@@ -31,15 +32,7 @@ function App() {
     } else if (guesses.length + 1 >= NUM_ATTEMPS) setIsCorrect(false);
   }
 
-  function release_year_comparison(year) {
-    if (year < CHARACTERS[answer]?.[ATTRIBUTES.INITIAL_RELEASE]) {
-      return year + " ↑";
-    } else if (year > CHARACTERS[answer]?.[ATTRIBUTES.INITIAL_RELEASE]) {
-      return year + " ↓";
-    } else {
-      return year;
-    }
-  }
+
 
   return (
     <div className="App">
@@ -69,20 +62,28 @@ function App() {
                     ? "green"
                     : "red"
                   : "";
+                const showImage = ATTRIBUTE_INDEX[col] === ATTRIBUTES.NAME &&
+                  answered
+
+
                 const value =
                   ATTRIBUTE_INDEX[col] === ATTRIBUTES.INITIAL_RELEASE &&
                     answered
-                    ? release_year_comparison(
+                    ? releaseYearFunction(
                       CHARACTERS[guesses[row]?.selectionIndex]?.[
-                      ATTRIBUTE_INDEX[col]
-                      ]
+                      ATTRIBUTE_INDEX[col] 
+                      ], answer
                     )
                     : CHARACTERS[guesses[row]?.selectionIndex]?.[
                     ATTRIBUTE_INDEX[col]
                     ];
                 return (
                   <div className={`square ${additionalClassName}`} key={col}>
-                    {value}
+                    {showImage ? (<img
+                      src={`${process.env.PUBLIC_URL}${CHARACTERS[guesses[row]?.selectionIndex]?.image_url}`}
+                      alt={CHARACTERS[guesses[row]?.selectionIndex]?.[ATTRIBUTE_INDEX[col]]}
+                      className="character-image-column"
+                    />) : value}
                   </div>
                 );
               })}
