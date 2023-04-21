@@ -2,15 +2,11 @@ import { Button, Select } from "antd";
 import { useMemo, useState } from "react";
 import "./App.css";
 import { Grid } from "./components/Grid";
-import {
-  ATTRIBUTES
-} from "./const/attributes";
+import { ATTRIBUTES } from "./const/attributes";
 import { CHARACTERS } from "./const/characters";
 import { NUM_ATTEMPS } from "./const/settings";
 
 function App() {
-
-
   const [isCorrect, setIsCorrect] = useState(false);
   const [guesses, setGuesses] = useState([]);
   const [selection, setSelection] = useState();
@@ -22,9 +18,9 @@ function App() {
 
   function handleGuess() {
     if (selection == undefined) {
-      console.error("Invalid Character")
-      return
-    };
+      console.error("Invalid Character");
+      return;
+    }
     setGuesses((prev) => {
       return [...prev, { selectionIndex: selection }];
     });
@@ -33,16 +29,12 @@ function App() {
     } else if (guesses.length + 1 >= NUM_ATTEMPS) setIsCorrect(false);
   }
 
-
-
   return (
     <div className="App">
       <header className="App-header">
         <p>Smashle</p>
       </header>
       <div className="App-body">
-
-
         <Grid answer={answer} guesses={guesses} />
         <div className="row">
           <Select
@@ -60,17 +52,35 @@ function App() {
             {CHARACTERS.map((character, i) => {
               const imageUrl = `${process.env.PUBLIC_URL}${character.image_url}`;
               return (
-                <Select.Option key={i} value={i} label={character[ATTRIBUTES.NAME]}>
+                <Select.Option
+                  key={i}
+                  value={i}
+                  label={character[ATTRIBUTES.NAME]}
+                >
                   <div className="character-option">
-                    <img src={imageUrl} className="character-image" alt={character[ATTRIBUTES.NAME]} />
-                    <span className="character-name">{character[ATTRIBUTES.NAME]}</span>
+                    <img
+                      src={imageUrl}
+                      className="character-image"
+                      alt={character[ATTRIBUTES.NAME]}
+                    />
+                    <span className="character-name">
+                      {character[ATTRIBUTES.NAME]}
+                    </span>
                   </div>
                 </Select.Option>
               );
             })}
           </Select>
 
-          <Button type="primary" onClick={handleGuess} disabled={isCorrect || guesses.length >= NUM_ATTEMPS || selection == undefined}>
+          <Button
+            type="primary"
+            onClick={handleGuess}
+            disabled={
+              isCorrect ||
+              guesses.length >= NUM_ATTEMPS ||
+              selection == undefined
+            }
+          >
             Make Guess
           </Button>
         </div>
