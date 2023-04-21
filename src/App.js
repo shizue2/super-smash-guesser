@@ -1,3 +1,4 @@
+import { Button, Select } from "antd";
 import { useMemo, useState } from "react";
 import "./App.css";
 import {
@@ -7,7 +8,7 @@ import {
 } from "./const/attributes";
 import { CHARACTERS } from "./const/characters";
 import { NUM_ATTEMPS } from "./const/settings";
-import { Select, Space, Button } from "antd";
+import { Select, Button } from "antd";
 
 function App() {
   const rows = Array.from(Array(NUM_ATTEMPS).keys());
@@ -124,7 +125,7 @@ function App() {
           <div className="correct_answer">Congrats!</div>
         ) : guesses.length >= NUM_ATTEMPS ? (
           <div className="wrong_answer">
-            Sorry, the correct answer was {CHARACTERS[answer]?.name}.
+            Sorry, the correct answer was {CHARACTERS[answer]?.name}
           </div>
         ) : null}
       </div>
