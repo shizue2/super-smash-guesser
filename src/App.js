@@ -1,22 +1,19 @@
 import { Button, Select } from "antd";
 import { useMemo, useState } from "react";
 import "./App.css";
+import { Grid } from "./components/Grid";
 import {
-  ATTRIBUTES,
-  ATTRIBUTE_INDEX,
-  ATTRIBUTE_LABELS,
+  ATTRIBUTES
 } from "./const/attributes";
 import { CHARACTERS } from "./const/characters";
 import { NUM_ATTEMPS } from "./const/settings";
-import { releaseYearFunction } from "./utils/releaseYearFunction";
 
 function App() {
-  const rows = Array.from(Array(NUM_ATTEMPS).keys());
-  const cols = Array.from(Array(Object.keys(ATTRIBUTES).length).keys());
+
 
   const [isCorrect, setIsCorrect] = useState(false);
   const [guesses, setGuesses] = useState([]);
-  const [selection, setSelection] = useState(0);
+  const [selection, setSelection] = useState();
   const answer = useMemo(() => {
     const randomInt = Math.floor(Math.random() * CHARACTERS.length);
     console.log("correct answer:", CHARACTERS[randomInt]);
@@ -24,6 +21,10 @@ function App() {
   }, []);
 
   function handleGuess() {
+    if (selection == undefined) {
+      console.error("Invalid Character")
+      return
+    };
     setGuesses((prev) => {
       return [...prev, { selectionIndex: selection }];
     });
@@ -40,61 +41,13 @@ function App() {
         <p>Smashle</p>
       </header>
       <div className="App-body">
-        <div className="row">
-          {Object.values(ATTRIBUTES).map((attribute) => (
-            <div className="attribute" key={attribute}>
-              {ATTRIBUTE_LABELS[attribute]}
-            </div>
-          ))}
-        </div>
-
-        <div>
-          {rows.map((row) => (
-            <div className="row" key={row}>
-              {cols.map((col) => {
-                const answered = guesses[row]?.selectionIndex != undefined;
-                const correct =
-                  CHARACTERS[guesses[row]?.selectionIndex]?.[
-                  ATTRIBUTE_INDEX[col]
-                  ] === CHARACTERS[answer]?.[ATTRIBUTE_INDEX[col]];
-                const additionalClassName = answered
-                  ? correct
-                    ? "green"
-                    : "red"
-                  : "";
-                const showImage = ATTRIBUTE_INDEX[col] === ATTRIBUTES.NAME &&
-                  answered
 
 
-                const value =
-                  ATTRIBUTE_INDEX[col] === ATTRIBUTES.INITIAL_RELEASE &&
-                    answered
-                    ? releaseYearFunction(
-                      CHARACTERS[guesses[row]?.selectionIndex]?.[
-                      ATTRIBUTE_INDEX[col] 
-                      ], answer
-                    )
-                    : CHARACTERS[guesses[row]?.selectionIndex]?.[
-                    ATTRIBUTE_INDEX[col]
-                    ];
-                return (
-                  <div className={`square ${additionalClassName}`} key={col}>
-                    {showImage ? (<img
-                      src={`${process.env.PUBLIC_URL}${CHARACTERS[guesses[row]?.selectionIndex]?.image_url}`}
-                      alt={CHARACTERS[guesses[row]?.selectionIndex]?.[ATTRIBUTE_INDEX[col]]}
-                      className="character-image-column"
-                    />) : value}
-                  </div>
-                );
-              })}
-            </div>
-          ))}
-        </div>
+        <Grid answer={answer} guesses={guesses} />
         <div className="row">
           <Select
             showSearch
             onChange={setSelection}
-            defaultValue={0}
             style={{ width: 240 }}
             filterOption={(input, option) => {
               console.log({ input, option });
@@ -117,7 +70,7 @@ function App() {
             })}
           </Select>
 
-          <Button type="primary" onClick={handleGuess} disabled={isCorrect}>
+          <Button type="primary" onClick={handleGuess} disabled={isCorrect || guesses.length >= NUM_ATTEMPS || selection == undefined}>
             Make Guess
           </Button>
         </div>
