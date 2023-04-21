@@ -44,7 +44,7 @@ function App() {
   return (
     <div className="App">
       <header className="App-header">
-        <p>Super Smash Bros. Character Guesser</p>
+        <p>Smashle</p>
       </header>
       <div className="App-body">
         <div className="row">
@@ -62,7 +62,7 @@ function App() {
                 const answered = guesses[row]?.selectionIndex != undefined;
                 const correct =
                   CHARACTERS[guesses[row]?.selectionIndex]?.[
-                    ATTRIBUTE_INDEX[col]
+                  ATTRIBUTE_INDEX[col]
                   ] === CHARACTERS[answer]?.[ATTRIBUTE_INDEX[col]];
                 const additionalClassName = answered
                   ? correct
@@ -71,15 +71,15 @@ function App() {
                   : "";
                 const value =
                   ATTRIBUTE_INDEX[col] === ATTRIBUTES.INITIAL_RELEASE &&
-                  answered
+                    answered
                     ? release_year_comparison(
-                        CHARACTERS[guesses[row]?.selectionIndex]?.[
-                          ATTRIBUTE_INDEX[col]
-                        ]
-                      )
+                      CHARACTERS[guesses[row]?.selectionIndex]?.[
+                      ATTRIBUTE_INDEX[col]
+                      ]
+                    )
                     : CHARACTERS[guesses[row]?.selectionIndex]?.[
-                        ATTRIBUTE_INDEX[col]
-                      ];
+                    ATTRIBUTE_INDEX[col]
+                    ];
                 return (
                   <div className={`square ${additionalClassName}`} key={col}>
                     {value}
@@ -104,18 +104,13 @@ function App() {
             optionLabelProp="label"
           >
             {CHARACTERS.map((character, i) => {
+              const imageUrl = `${process.env.PUBLIC_URL}${character.image_url}`;
               return (
-                <Select.Option
-                  key={i}
-                  value={i}
-                  label={character[ATTRIBUTES.NAME]}
-                >
-                  <Space>
-                    <span role="img" aria-label="China">
-                      👾
-                    </span>
-                    {character[ATTRIBUTES.NAME]}
-                  </Space>
+                <Select.Option key={i} value={i} label={character[ATTRIBUTES.NAME]}>
+                  <div className="character-option">
+                    <img src={imageUrl} className="character-image" />
+                    <span className="character-name">{character[ATTRIBUTES.NAME]}</span>
+                  </div>
                 </Select.Option>
               );
             })}

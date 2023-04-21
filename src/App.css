@@ -64,3 +64,12 @@ p {
 .green {
   background: #6cb965;
 }
+
+.character-image{
+  width: 40px;
+  height: 40px;
+}
+
+.character-option{
+  align-items:end;
+}

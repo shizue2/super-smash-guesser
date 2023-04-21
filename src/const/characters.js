@@ -5,7 +5,8 @@ export const CHARACTERS = [
     "series": "Super Mario",
     "initial_release_year": "1981",
     "gender": "Male",
-    "range_type": "Close-range"
+    "range_type": "Close-range",
+    "image_url": "/Character-images/Mario.png",
   },
   {
     "name": "Donkey Kong",
@@ -13,7 +14,8 @@ export const CHARACTERS = [
     "series": "Donkey Kong",
     "initial_release_year": "1981",
     "gender": "Male",
-    "range_type": "Mid-range"
+    "range_type": "Mid-range",
+    "image_url": "/Character-images/Donkey_Kong.png",
   },
   {
     "name": "Link",
@@ -21,7 +23,8 @@ export const CHARACTERS = [
     "series": "The Legend of Zelda",
     "initial_release_year": "1986",
     "gender": "Male",
-    "range_type": "Mid-range"
+    "range_type": "Mid-range",
+    "image_url": "/Character-images/Link.png",
   },
   {
     "name": "Samus",
@@ -29,7 +32,8 @@ export const CHARACTERS = [
     "series": "Metroid",
     "initial_release_year": "1986",
     "gender": "Female",
-    "range_type": "Long-range"
+    "range_type": "Long-range",
+    "image_url": "/Character-images/Samus.png",
   },
   {
     "name": "Yoshi",
@@ -37,7 +41,8 @@ export const CHARACTERS = [
     "series": "Yoshi",
     "initial_release_year": "1990",
     "gender": "Male",
-    "range_type": "Close-range"
+    "range_type": "Close-range",
+    "image_url": "/Character-images/Yoshi.png",
   },
   {
     "name": "Kirby",
@@ -45,7 +50,8 @@ export const CHARACTERS = [
     "series": "Kirby",
     "initial_release_year": "1992",
     "gender": "Male",
-    "range_type": "Close-range"
+    "range_type": "Close-range",
+    "image_url": "/Character-images/Kirby.png",
   },
   {
     "name": "Fox",
@@ -53,7 +59,8 @@ export const CHARACTERS = [
     "series": "Star Fox",
     "initial_release_year": "1993",
     "gender": "Male",
-    "range_type": "Long-range"
+    "range_type": "Long-range",
+    "image_url": "/Character-images/Fox.png",
   },
   {
     "name": "Pikachu",
@@ -61,7 +68,8 @@ export const CHARACTERS = [
     "series": "Pok\u00e9mon",
     "initial_release_year": "1996",
     "gender": "Varies",
-    "range_type": "Mid-range"
+    "range_type": "Mid-range",
+    "image_url": "/Character-images/Pikachu.png",
   },
   {
     "name": "Luigi",
@@ -69,7 +77,8 @@ export const CHARACTERS = [
     "series": "Super Mario",
     "initial_release_year": "1983",
     "gender": "Male",
-    "range_type": "Close-range"
+    "range_type": "Close-range",
+    "image_url": "/Character-images/Luigi.png",
   },
   {
     "name": "Ness",
@@ -77,7 +86,8 @@ export const CHARACTERS = [
     "series": "EarthBound",
     "initial_release_year": "1994",
     "gender": "Male",
-    "range_type": "Mid-range"
+    "range_type": "Mid-range",
+    "image_url": "/Character-images/Ness.png",
   },
   {
     "name": "Captain Falcon",
@@ -85,7 +95,8 @@ export const CHARACTERS = [
     "series": "F-Zero",
     "initial_release_year": "1990",
     "gender": "Male",
-    "range_type": "Close-range"
+    "range_type": "Close-range",
+    "image_url": "/Character-images/Captain_Falcon.png",
   },
   {
     "name": "Jigglypuff",
@@ -93,7 +104,8 @@ export const CHARACTERS = [
     "series": "Pok\u00e9mon",
     "initial_release_year": "1996",
     "gender": "Varies",
-    "range_type": "Close-range"
+    "range_type": "Close-range",
+    "image_url": "/Character-images/Jigglypuff.png",
   },
   {
     "name": "Peach",
@@ -101,7 +113,8 @@ export const CHARACTERS = [
     "series": "Super Mario",
     "initial_release_year": "1985",
     "gender": "Female",
-    "range_type": "Close-range"
+    "range_type": "Close-range",
+    "image_url": "/Character-images/Peach.png",
   },
   {
     "name": "Daisy",
@@ -109,7 +122,8 @@ export const CHARACTERS = [
     "series": "Super Mario",
     "initial_release_year": "1989",
     "gender": "Female",
-    "range_type": "Close-range"
+    "range_type": "Close-range",
+    "image_url": "/Character-images/Daisy.png",
   },
   {
     "name": "Bowser",
@@ -117,7 +131,8 @@ export const CHARACTERS = [
     "series": "Super Mario",
     "initial_release_year": "1985",
     "gender": "Male",
-    "range_type": "Close-range"
+    "range_type": "Close-range",
+    "image_url": "/Character-images/Bowser.png",
   },
   {
     "name": "Ice Climbers",
@@ -125,7 +140,8 @@ export const CHARACTERS = [
     "series": "Ice Climber",
     "initial_release_year": "1985",
     "gender": "Varies",
-    "range_type": "Close-range"
+    "range_type": "Close-range",
+    "image_url": "/Character-images/Ice_Climbers.png",
   },
   {
     "name": "Sheik",
@@ -133,7 +149,8 @@ export const CHARACTERS = [
     "series": "The Legend of Zelda",
     "initial_release_year": "1998",
     "gender": "Female",
-    "range_type": "Close-range"
+    "range_type": "Close-range",
+    "image_url": "/Character-images/Sheik.png",
   },
   {
     "name": "Zelda",
@@ -141,7 +158,8 @@ export const CHARACTERS = [
     "series": "The Legend of Zelda",
     "initial_release_year": "1986",
     "gender": "Female",
-    "range_type": "Mid-range"
+    "range_type": "Mid-range",
+    "image_url": "/Character-images/Zelda.png",
   },
   {
     "name": "Dr. Mario",
@@ -149,7 +167,8 @@ export const CHARACTERS = [
     "series": "Dr. Mario",
     "initial_release_year": "1990",
     "gender": "Male",
-    "range_type": "Close-range"
+    "range_type": "Close-range",
+    "image_url": "/Character-images/Dr._Mario.png",
   },
   {
     "name": "Pichu",
@@ -157,7 +176,8 @@ export const CHARACTERS = [
     "series": "Pok\u00e9mon",
     "initial_release_year": "2000",
     "gender": "Varies",
-    "range_type": "Mid-range"
+    "range_type": "Mid-range",
+    "image_url": "/Character-images/Pichu.png",
   },
   {
     "name": "Falco",
@@ -165,7 +185,8 @@ export const CHARACTERS = [
     "series": "Star Fox",
     "initial_release_year": "1997",
     "gender": "Male",
-    "range_type": "Long-range"
+    "range_type": "Long-range",
+    "image_url": "/Character-images/Falco.png",
   },
   {
     "name": "Marth",
@@ -173,7 +194,8 @@ export const CHARACTERS = [
     "series": "Fire Emblem",
     "initial_release_year": "1990",
     "gender": "Male",
-    "range_type": "Close-range"
+    "range_type": "Close-range",
+    "image_url": "/Character-images/Marth.png",
   },
   {
     "name": "Lucina",
@@ -181,7 +203,8 @@ export const CHARACTERS = [
     "series": "Fire Emblem",
     "initial_release_year": "2012",
     "gender": "Female",
-    "range_type": "Close-range"
+    "range_type": "Close-range",
+    "image_url": "/Character-images/Lucina.png",
   },
   {
     "name": "Young Link",
@@ -189,7 +212,8 @@ export const CHARACTERS = [
     "series": "The Legend of Zelda",
     "initial_release_year": "2000",
     "gender": "Male",
-    "range_type": "Mid-range"
+    "range_type": "Mid-range",
+    "image_url": "/Character-images/Young_Link.png",
   },
   {
     "name": "Ganondorf",
@@ -197,7 +221,8 @@ export const CHARACTERS = [
     "series": "The Legend of Zelda",
     "initial_release_year": "1998",
     "gender": "Male",
-    "range_type": "Close-range"
+    "range_type": "Close-range",
+    "image_url": "/Character-images/Ganondorf.png",
   },
   {
     "name": "Mewtwo",
@@ -205,7 +230,8 @@ export const CHARACTERS = [
     "series": "Pok\u00e9mon",
     "initial_release_year": "1996",
     "gender": "Varies",
-    "range_type": "Mid-range"
+    "range_type": "Mid-range",
+    "image_url": "/Character-images/Mewtwo.png"
   },
   {
     "name": "Roy",
@@ -213,7 +239,8 @@ export const CHARACTERS = [
     "series": "Fire Emblem",
     "initial_release_year": "2002",
     "gender": "Male",
-    "range_type": "Close-range"
+    "range_type": "Close-range",
+    "image_url": "/Character-images/Roy.png"
   },
   {
     "name": "Chrom",
@@ -221,7 +248,8 @@ export const CHARACTERS = [
     "series": "Fire Emblem",
     "initial_release_year": "2012",
     "gender": "Male",
-    "range_type": "Close-range"
+    "range_type": "Close-range",
+    "image_url": "/Character-images/Chrom.png"
   },
   {
     "name": "Mr. Game & Watch",
@@ -229,7 +257,8 @@ export const CHARACTERS = [
     "series": "Game & Watch",
     "initial_release_year": "1980",
     "gender": "Varies",
-    "range_type": "Mid-range"
+    "range_type": "Mid-range",
+    "image_url": "/Character-images/Mr._Game_&_Watch.png"
   },
   {
     "name": "Meta Knight",
@@ -237,7 +266,8 @@ export const CHARACTERS = [
     "series": "Kirby",
     "initial_release_year": "1993",
     "gender": "Male",
-    "range_type": "Close-range"
+    "range_type": "Close-range",
+    "image_url": "/Character-images/Meta_Knight.png"
   },
   {
     "name": "Pit",
@@ -245,7 +275,8 @@ export const CHARACTERS = [
     "series": "Kid Icarus",
     "initial_release_year": "1986",
     "gender": "Male",
-    "range_type": "Mid-range"
+    "range_type": "Mid-range",
+    "image_url": "/Character-images/Pit.png"
   },
   {
     "name": "Dark Pit",
@@ -253,7 +284,8 @@ export const CHARACTERS = [
     "series": "Kid Icarus",
     "initial_release_year": "2012",
     "gender": "Male",
-    "range_type": "Mid-range"
+    "range_type": "Mid-range",
+    "image_url": "/Character-images/Dark_Pit.png"
   },
   {
     "name": "Zero Suit Samus",
@@ -261,7 +293,8 @@ export const CHARACTERS = [
     "series": "Metroid",
     "initial_release_year": "2004",
     "gender": "Female",
-    "range_type": "Mid-range"
+    "range_type": "Mid-range",
+    "image_url": "/Character-images/Zero_Suit_Samus.png"
   },
   {
     "name": "Wario",
@@ -269,7 +302,8 @@ export const CHARACTERS = [
     "series": "Wario",
     "initial_release_year": "1992",
     "gender": "Male",
-    "range_type": "Close-range"
+    "range_type": "Close-range",
+    "image_url": "/Character-images/Wario.png"
   },
   {
     "name": "Snake",
@@ -277,7 +311,8 @@ export const CHARACTERS = [
     "series": "Metal Gear",
     "initial_release_year": "1987",
     "gender": "Male",
-    "range_type": "Long-range"
+    "range_type": "Long-range",
+    "image_url": "/Character-images/Snake.png"
   },
   {
     "name": "Ike",
@@ -285,7 +320,8 @@ export const CHARACTERS = [
     "series": "Fire Emblem",
     "initial_release_year": "2005",
     "gender": "Male",
-    "range_type": "Close-range"
+    "range_type": "Close-range",
+    "image_url": "/Character-images/Ike.png"
   },
   {
     "name": "Pokemon Trainer",
@@ -293,7 +329,8 @@ export const CHARACTERS = [
     "series": "Pok\u00e9mon",
     "initial_release_year": "1996",
     "gender": "Varies",
-    "range_type": "Mid-range"
+    "range_type": "Mid-range",
+    "image_url": "/Character-images/Pokémon_Trainer.png"
   },
   {
     "name": "Diddy Kong",
@@ -301,7 +338,8 @@ export const CHARACTERS = [
     "series": "Donkey Kong",
     "initial_release_year": "1994",
     "gender": "Male",
-    "range_type": "Close-range"
+    "range_type": "Close-range",
+    "image_url": "/Character-images/Diddy_Kong.png"
   },
   {
     "name": "Lucas",
@@ -309,7 +347,8 @@ export const CHARACTERS = [
     "series": "Mother",
     "initial_release_year": "2006",
     "gender": "Male",
-    "range_type": "Mid-range"
+    "range_type": "Mid-range",
+    "image_url": "/Character-images/Lucas.png"
   },
   {
     "name": "Sonic",
@@ -317,7 +356,8 @@ export const CHARACTERS = [
     "series": "Sonic the Hedgehog",
     "initial_release_year": "1991",
     "gender": "Male",
-    "range_type": "Close-range"
+    "range_type": "Close-range",
+    "image_url": "/Character-images/Sonic.png"
   },
   {
     "name": "King Dedede",
@@ -325,7 +365,8 @@ export const CHARACTERS = [
     "series": "Kirby",
     "initial_release_year": "1992",
     "gender": "Male",
-    "range_type": "Close-range"
+    "range_type": "Close-range",
+    "image_url": "/Character-images/King_Dedede.png"
   },
   {
     "name": "Olimar",
@@ -333,7 +374,8 @@ export const CHARACTERS = [
     "series": "Pikmin",
     "initial_release_year": "2001",
     "gender": "Male",
-    "range_type": "Mid-range"
+    "range_type": "Mid-range",
+    "image_url": "/Character-images/Olimar.png"
   },
   {
     "name": "Lucario",
@@ -341,7 +383,8 @@ export const CHARACTERS = [
     "series": "Pok\u00e9mon",
     "initial_release_year": "2006",
     "gender": "Varies",
-    "range_type": "Mid-range"
+    "range_type": "Mid-range",
+    "image_url": "/Character-images/Lucario.png"
   },
   {
     "name": "R.O.B.",
@@ -349,7 +392,8 @@ export const CHARACTERS = [
     "series": "R.O.B.",
     "initial_release_year": "1985",
     "gender": "Varies",
-    "range_type": "Mid-range"
+    "range_type": "Mid-range",
+    "image_url": "/Character-images/R.O.B..png"
   },
   {
     "name": "Toon Link",
@@ -357,7 +401,8 @@ export const CHARACTERS = [
     "series": "The Legend of Zelda",
     "initial_release_year": "2002",
     "gender": "Male",
-    "range_type": "Mid-range"
+    "range_type": "Mid-range",
+    "image_url": "/Character-images/Toon_Link.png"
   },
   {
     "name": "Wolf",
@@ -365,7 +410,8 @@ export const CHARACTERS = [
     "series": "Star Fox",
     "initial_release_year": "1997",
     "gender": "Male",
-    "range_type": "Mid-range"
+    "range_type": "Mid-range",
+    "image_url": "/Character-images/Wolf.png"
   },
   {
     "name": "Villager",
@@ -373,7 +419,8 @@ export const CHARACTERS = [
     "series": "Animal Crossing",
     "initial_release_year": "2001",
     "gender": "Varies",
-    "range_type": "Close-range"
+    "range_type": "Close-range",
+    "image_url": "/Character-images/Villager.png"
   },
   {
     "name": "Mega Man",
@@ -381,7 +428,8 @@ export const CHARACTERS = [
     "series": "Mega Man",
     "initial_release_year": "1987",
     "gender": "Male",
-    "range_type": "Long-range"
+    "range_type": "Long-range",
+    "image_url": "/Character-images/Mega_Man.png"
   },
   {
     "name": "Wii Fit Trainer",
@@ -389,7 +437,8 @@ export const CHARACTERS = [
     "series": "Wii Fit",
     "initial_release_year": "2007",
     "gender": "Varies",
-    "range_type": "Close-range"
+    "range_type": "Close-range",
+    "image_url": "/Character-images/Wii_Fit_Trainer.png"
   },
   {
     "name": "Rosalina & Luma",
@@ -397,7 +446,8 @@ export const CHARACTERS = [
     "series": "Super Mario",
     "initial_release_year": "2007",
     "gender": "Female",
-    "range_type": "Mid-range"
+    "range_type": "Mid-range",
+    "image_url": "/Character-images/Rosalina.png"
   },
   {
     "name": "Little Mac",
@@ -405,15 +455,17 @@ export const CHARACTERS = [
     "series": "Punch-Out!!",
     "initial_release_year": "1983",
     "gender": "Male",
-    "range_type": "Close-range"
+    "range_type": "Close-range",
+    "image_url": "/Character-images/Little_Mac.png"
   },
   {
     "name": "Greninja",
     "company": "Nintendo",
-    "series": "Pok\u00e9mon",
+    "series": "Pokémon",
     "initial_release_year": "2013",
     "gender": "Varies",
-    "range_type": "Close-range"
+    "range_type": "Close-range",
+    "image_url": "/Character-images/Greninja.png"
   },
   {
     "name": "Mii Brawler",
@@ -421,7 +473,8 @@ export const CHARACTERS = [
     "series": "Mii",
     "initial_release_year": "2006",
     "gender": "Varies",
-    "range_type": "Close-range"
+    "range_type": "Close-range",
+    "image_url": "/Character-images/Mii_Brawler.png"
   },
   {
     "name": "Mii Swordfighter",
@@ -429,7 +482,8 @@ export const CHARACTERS = [
     "series": "Mii",
     "initial_release_year": "2006",
     "gender": "Varies",
-    "range_type": "Mid-range"
+    "range_type": "Mid-range",
+    "image_url": "/Character-images/Mii_Swordfighter.png"
   },
   {
     "name": "Mii Gunner",
@@ -437,15 +491,18 @@ export const CHARACTERS = [
     "series": "Mii",
     "initial_release_year": "2006",
     "gender": "Varies",
-    "range_type": "Long-range"
+    "range_type": "Long-range",
+    "image_url": "/Character-images/Mii_Gunner.png"
   },
+
   {
     "name": "Palutena",
     "company": "Nintendo",
     "series": "Kid Icarus",
     "initial_release_year": "1986",
     "gender": "Female",
-    "range_type": "Mid-range"
+    "range_type": "Mid-range",
+    "image_url": "/Character-images/Palutena.png"
   },
   {
     "name": "Pac-Man",
@@ -453,7 +510,8 @@ export const CHARACTERS = [
     "series": "Pac-Man",
     "initial_release_year": "1980",
     "gender": "Male",
-    "range_type": "Mid-range"
+    "range_type": "Mid-range",
+    "image_url": "/Character-images/Pac-Man.png"
   },
   {
     "name": "Robin",
@@ -461,7 +519,8 @@ export const CHARACTERS = [
     "series": "Fire Emblem",
     "initial_release_year": "2012",
     "gender": "Varies",
-    "range_type": "Mid-range"
+    "range_type": "Mid-range",
+    "image_url": "/Character-images/Robin.png"
   },
   {
     "name": "Shulk",
@@ -469,7 +528,8 @@ export const CHARACTERS = [
     "series": "Xenoblade Chronicles",
     "initial_release_year": "2010",
     "gender": "Male",
-    "range_type": "Mid-range"
+    "range_type": "Mid-range",
+    "image_url": "/Character-images/Shulk.png"
   },
   {
     "name": "Bowser Jr.",
@@ -477,7 +537,8 @@ export const CHARACTERS = [
     "series": "Super Mario",
     "initial_release_year": "2002",
     "gender": "Male",
-    "range_type": "Close-range"
+    "range_type": "Close-range",
+    "image_url": "/Character-images/Bowser_Jr..png"
   },
   {
     "name": "Duck Hunt",
@@ -485,7 +546,8 @@ export const CHARACTERS = [
     "series": "Duck Hunt",
     "initial_release_year": "1984",
     "gender": "Varies",
-    "range_type": "Long-range"
+    "range_type": "Long-range",
+    "image_url": "/Character-images/Duck_Hunt.png"
   },
   {
     "name": "Ryu",
@@ -493,7 +555,8 @@ export const CHARACTERS = [
     "series": "Street Fighter",
     "initial_release_year": "1987",
     "gender": "Male",
-    "range_type": "Close-range"
+    "range_type": "Close-range",
+    "image_url": "/Character-images/Ryu.png"
   },
   {
     "name": "Ken",
@@ -501,7 +564,8 @@ export const CHARACTERS = [
     "series": "Street Fighter",
     "initial_release_year": "1987",
     "gender": "Male",
-    "range_type": "Close-range"
+    "range_type": "Close-range",
+    "image_url": "/Character-images/Ken.png"
   },
   {
     "name": "Cloud",
@@ -509,7 +573,8 @@ export const CHARACTERS = [
     "series": "Final Fantasy",
     "initial_release_year": "1997",
     "gender": "Male",
-    "range_type": "Mid-range"
+    "range_type": "Mid-range",
+    "image_url": "/Character-images/Cloud.png"
   },
   {
     "name": "Corrin",
@@ -517,7 +582,8 @@ export const CHARACTERS = [
     "series": "Fire Emblem",
     "initial_release_year": "2015",
     "gender": "Varies",
-    "range_type": "Close-range"
+    "range_type": "Close-range",
+    "image_url": "/Character-images/Corrin.png"
   },
   {
     "name": "Bayonetta",
@@ -525,7 +591,8 @@ export const CHARACTERS = [
     "series": "Bayonetta",
     "initial_release_year": "2009",
     "gender": "Female",
-    "range_type": "Close-range"
+    "range_type": "Close-range",
+    "image_url": "/Character-images/Bayonetta.png"
   },
   {
     "name": "Inkling",
@@ -533,7 +600,8 @@ export const CHARACTERS = [
     "series": "Splatoon",
     "initial_release_year": "2015",
     "gender": "Varies",
-    "range_type": "Close-range"
+    "range_type": "Close-range",
+    "image_url": "/Character-images/Inkling.png"
   },
   {
     "name": "Ridley",
@@ -541,7 +609,8 @@ export const CHARACTERS = [
     "series": "Metroid",
     "initial_release_year": "1986",
     "gender": "Male",
-    "range_type": "Close-range"
+    "range_type": "Close-range",
+    "image_url": "/Character-images/Ridley.png"
   },
   {
     "name": "Simon Belmont",
@@ -549,7 +618,8 @@ export const CHARACTERS = [
     "series": "Castlevania",
     "initial_release_year": "1986",
     "gender": "Male",
-    "range_type": "Mid-range"
+    "range_type": "Mid-range",
+    "image_url": "/Character-images/Simon.png"
   },
   {
     "name": "Richter",
@@ -557,7 +627,8 @@ export const CHARACTERS = [
     "series": "Castlevania",
     "initial_release_year": "1993",
     "gender": "Male",
-    "range_type": "Mid-range"
+    "range_type": "Mid-range",
+    "image_url": "/Character-images/Richter.png"
   },
   {
     "name": "King K. Rool",
@@ -565,7 +636,8 @@ export const CHARACTERS = [
     "series": "Donkey Kong",
     "initial_release_year": "1994",
     "gender": "Male",
-    "range_type": "Close-range"
+    "range_type": "Close-range",
+    "image_url": "/Character-images/King_k._Rool.png"
   },
   {
     "name": "Isabelle",
@@ -573,7 +645,8 @@ export const CHARACTERS = [
     "series": "Animal Crossing",
     "initial_release_year": "2012",
     "gender": "Female",
-    "range_type": "Mid-range"
+    "range_type": "Mid-range",
+    "image_url": "/Character-images/Isabelle.png"
   },
   {
     "name": "Incineroar",
@@ -581,7 +654,8 @@ export const CHARACTERS = [
     "series": "Pok\u00e9mon",
     "initial_release_year": "2016",
     "gender": "Varies",
-    "range_type": "Close-range"
+    "range_type": "Close-range",
+    "image_url": "/Character-images/Incineroar.png"
   },
   {
     "name": "Piranha Plant",
@@ -589,7 +663,8 @@ export const CHARACTERS = [
     "series": "Super Mario",
     "initial_release_year": "1985",
     "gender": "Varies",
-    "range_type": "Close-range"
+    "range_type": "Close-range",
+    "image_url": "/Character-images/Piranha_Plant.png"
   },
   {
     "name": "Joker",
@@ -597,7 +672,8 @@ export const CHARACTERS = [
     "series": "Persona",
     "initial_release_year": "2016",
     "gender": "Male",
-    "range_type": "Mid-range"
+    "range_type": "Mid-range",
+    "image_url": "/Character-images/Joker.png"
   },
   {
     "name": "Hero",
@@ -605,7 +681,8 @@ export const CHARACTERS = [
     "series": "Dragon Quest",
     "initial_release_year": "1986",
     "gender": "Varies",
-    "range_type": "Mid-range"
+    "range_type": "Mid-range",
+    "image_url": "/Character-images/Hero.png"
   },
   {
     "name": "Banjo & Kazooie",
@@ -613,15 +690,17 @@ export const CHARACTERS = [
     "series": "Banjo-Kazooie",
     "initial_release_year": "1998",
     "gender": "Varies",
-    "range_type": "Close-range"
+    "range_type": "Close-range",
+    "image_url": "/Character-images/Banjo_Kazooie.png"
   },
   {
-    "name": "TerryBogard",
+    "name": "Terry Bogard",
     "company": "SNK",
     "series": "Fatal Fury",
     "initial_release_year": "1991",
     "gender": "Male",
-    "range_type": "Close-range"
+    "range_type": "Close-range",
+    "image_url": "/Character-images/Terry_Bogard.png"
   },
   {
     "name": "Byleth",
@@ -629,7 +708,8 @@ export const CHARACTERS = [
     "series": "Fire Emblem",
     "initial_release_year": "2019",
     "gender": "Varies",
-    "range_type": "Mid-range"
+    "range_type": "Mid-range",
+    "image_url": "/Character-images/Byleth.png"
   },
   {
     "name": "Min Min",
@@ -637,7 +717,8 @@ export const CHARACTERS = [
     "series": "ARMS",
     "initial_release_year": "2017",
     "gender": "Female",
-    "range_type": "Mid-range"
+    "range_type": "Mid-range",
+    "image_url": "/Character-images/Min_Min.png"
   },
   {
     "name": "Steve",
@@ -645,15 +726,8 @@ export const CHARACTERS = [
     "series": "Minecraft",
     "initial_release_year": "2009",
     "gender": "Varies",
-    "range_type": "Mid-range"
-  },
-  {
-    "name": "Alex",
-    "company": "Microsoft",
-    "series": "Minecraft",
-    "initial_release_year": "2014",
-    "gender": "Varies",
-    "range_type": "Mid-range"
+    "range_type": "Mid-range",
+    "image_url": "/Character-images/Steve.png"
   },
   {
     "name": "Sephiroth",
@@ -661,23 +735,17 @@ export const CHARACTERS = [
     "series": "Final Fantasy",
     "initial_release_year": "1997",
     "gender": "Male",
-    "range_type": "Mid-range"
+    "range_type": "Mid-range",
+    "image_url": "/Character-images/Sephiroth.png"
   },
   {
-    "name": "Pyra",
+    "name": "Pyra/Mythra",
     "company": "Nintendo",
     "series": "Xenoblade Chronicles",
     "initial_release_year": "2017",
     "gender": "Female",
-    "range_type": "Close-range"
-  },
-  {
-    "name": "Mythra",
-    "company": "Nintendo",
-    "series": "Xenoblade Chronicles",
-    "initial_release_year": "2017",
-    "gender": "Female",
-    "range_type": "Mid-range"
+    "range_type": "Close-range",
+    "image_url": "/Character-images/Pyra_Mythra.png"
   },
   {
     "name": "Kazuya Mishima",
@@ -685,7 +753,8 @@ export const CHARACTERS = [
     "series": "Tekken",
     "initial_release_year": "1994",
     "gender": "Male",
-    "range_type": "Close-range"
+    "range_type": "Close-range",
+    "image_url": "/Character-images/Kazuya_Mishima.png"
   },
   {
     "name": "Sora",
@@ -693,6 +762,7 @@ export const CHARACTERS = [
     "series": "Kingdom Hearts",
     "initial_release_year": "2002",
     "gender": "Male",
-    "range_type": "Close-range"
+    "range_type": "Close-range",
+    "image_url": "/Character-images/Sora.png"
   }
 ]
