@@ -8,7 +8,6 @@ import {
 } from "./const/attributes";
 import { CHARACTERS } from "./const/characters";
 import { NUM_ATTEMPS } from "./const/settings";
-import { Select, Button } from "antd";
 
 function App() {
   const rows = Array.from(Array(NUM_ATTEMPS).keys());
