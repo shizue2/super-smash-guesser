@@ -108,7 +108,7 @@ function App() {
               return (
                 <Select.Option key={i} value={i} label={character[ATTRIBUTES.NAME]}>
                   <div className="character-option">
-                    <img src={imageUrl} className="character-image" />
+                    <img src={imageUrl} className="character-image" alt={character[ATTRIBUTES.NAME]} />
                     <span className="character-name">{character[ATTRIBUTES.NAME]}</span>
                   </div>
                 </Select.Option>
