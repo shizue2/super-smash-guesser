@@ -6,7 +6,10 @@ import { ATTRIBUTES } from "./const/attributes";
 import { CHARACTERS } from "./const/characters";
 import { NUM_ATTEMPS } from "./const/settings";
 
+
+
 function App() {
+  const hello = "Hello world";
   const [isCorrect, setIsCorrect] = useState(false);
   const [guesses, setGuesses] = useState([]);
   const [selection, setSelection] = useState();
