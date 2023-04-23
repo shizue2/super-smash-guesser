@@ -1,8 +1,7 @@
-import { useReducer, useEffect, useCallback, useMemo } from "react";
-import { CHARACTERS } from "../const/characters";
 import rand from "random-seed";
+import { useCallback, useEffect, useMemo, useReducer } from "react";
+import { CHARACTERS } from "../const/characters";
 import guessesReducer, { GUESSES_REDUCER_ACTIONS } from "./guessesReducer";
-import { getTodaysResult, getTodaysGuesses } from "../utils/localStorage";
 
 const getTodaysInt = () => {
   const today = new Date();
@@ -16,7 +15,6 @@ const initialState = {
 
 const useGuesses = () => {
   const todayInt = useMemo(() => getTodaysInt(), []);
-
   const [state, dispatch] = useReducer(guessesReducer, initialState);
   const { guesses, isCorrect } = state;
 
@@ -28,14 +26,10 @@ const useGuesses = () => {
   }, [todayInt]);
 
   useEffect(() => {
-    const storedHistory = localStorage.getItem("guessesHistory");
-    const history = storedHistory ? JSON.parse(storedHistory) : {};
-
     dispatch({
       type: GUESSES_REDUCER_ACTIONS.SET_INITIAL_STATE,
       payload: {
-        guesses: getTodaysGuesses(todayInt, history),
-        isCorrect: getTodaysResult(todayInt, history) > 0,
+        todayInt,
       },
     });
   }, [todayInt]);
@@ -46,7 +40,6 @@ const useGuesses = () => {
         console.error("Invalid Character");
         return;
       }
-
       dispatch({
         type: GUESSES_REDUCER_ACTIONS.ADD_GUESS,
         payload: {
