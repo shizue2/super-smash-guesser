@@ -16,12 +16,16 @@ export function Grid({ answer, guesses }) {
   useEffect(() => {
     if (guesses.length === 0) return;
 
-    const newFlipState = [...flipState];
-    newFlipState[guesses.length - 1] = true;
-    setFlipState(newFlipState);
+    setFlipState((prevFlipState) => {
+      const newFlipState = [...prevFlipState];
+      newFlipState[guesses.length - 1] = true;
+      return newFlipState;
+    });
     const timeoutId = setTimeout(() => {
-      newFlipState[guesses.length - 1] = false;
-      setFlipState(newFlipState);
+      setFlipState((prevFlipState) => {
+        const newFlipState = [...prevFlipState];
+        newFlipState[guesses.length - 1] = false;
+        return newFlipState;})
     }, 1000);
     return () => clearTimeout(timeoutId);
   }, [guesses]);
@@ -84,7 +88,6 @@ export function Grid({ answer, guesses }) {
                 ) : (
                   value
                 )}
-                <div className="flip-cover"></div>
               </div>
             );
           })}

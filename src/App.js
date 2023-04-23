@@ -6,14 +6,10 @@ import { ATTRIBUTES } from "./const/attributes";
 import { CHARACTERS } from "./const/characters";
 import { NUM_ATTEMPS } from "./const/settings";
 
-
-
-
 function App() {
   const [isCorrect, setIsCorrect] = useState(false);
   const [guesses, setGuesses] = useState([]);
   const [selection, setSelection] = useState();
-  const [isFlipping, setIsFlipping] = useState(false);
   const answer = useMemo(() => {
     const randomInt = Math.floor(Math.random() * CHARACTERS.length);
     console.log("correct answer:", CHARACTERS[randomInt]);
@@ -31,7 +27,6 @@ function App() {
     if (selection == answer) {
       setIsCorrect(true);
     } else if (guesses.length + 1 >= NUM_ATTEMPS) setIsCorrect(false);
-    setIsFlipping(true);
   }
 
   return (
