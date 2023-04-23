@@ -42,9 +42,9 @@ export function Grid({ answer, guesses }) {
       {rows.map((row) => (
         <div className="row" key={row}>
           {cols.map((col) => {
-            const answered = guesses[row]?.selectionIndex != undefined;
+            const answered = guesses[row] != undefined;
             const correct =
-              CHARACTERS[guesses[row]?.selectionIndex]?.[
+              CHARACTERS[guesses[row]]?.[
                 ATTRIBUTE_INDEX[col]
               ] === CHARACTERS[answer]?.[ATTRIBUTE_INDEX[col]];
             const additionalClassName = answered
@@ -58,12 +58,12 @@ export function Grid({ answer, guesses }) {
             const value =
               ATTRIBUTE_INDEX[col] === ATTRIBUTES.INITIAL_RELEASE && answered
                 ? releaseYearFunction(
-                    CHARACTERS[guesses[row]?.selectionIndex]?.[
+                    CHARACTERS[guesses[row]]?.[
                       ATTRIBUTE_INDEX[col]
                     ],
                     answer
                   )
-                : CHARACTERS[guesses[row]?.selectionIndex]?.[
+                : CHARACTERS[guesses[row]]?.[
                     ATTRIBUTE_INDEX[col]
                   ];
             return (
@@ -76,10 +76,10 @@ export function Grid({ answer, guesses }) {
                 {showImage ? (
                   <img
                     src={`${process.env.PUBLIC_URL}${
-                      CHARACTERS[guesses[row]?.selectionIndex]?.image_url
+                      CHARACTERS[guesses[row]]?.image_url
                     }`}
                     alt={
-                      CHARACTERS[guesses[row]?.selectionIndex]?.[
+                      CHARACTERS[guesses[row]]?.[
                         ATTRIBUTE_INDEX[col]
                       ]
                     }

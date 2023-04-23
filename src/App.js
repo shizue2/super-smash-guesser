@@ -1,34 +1,15 @@
 import { Button, Select } from "antd";
-import { useMemo, useState } from "react";
+import { useState } from "react";
 import "./App.css";
 import { Grid } from "./components/Grid";
 import { ATTRIBUTES } from "./const/attributes";
 import { CHARACTERS } from "./const/characters";
 import { NUM_ATTEMPS } from "./const/settings";
+import useGuesses from "./hooks/useGuesses";
 
 function App() {
-  const [isCorrect, setIsCorrect] = useState(false);
-  const [guesses, setGuesses] = useState([]);
   const [selection, setSelection] = useState();
-  const answer = useMemo(() => {
-    const randomInt = Math.floor(Math.random() * CHARACTERS.length);
-    console.log("correct answer:", CHARACTERS[randomInt]);
-    return randomInt;
-  }, []);
-
-  function handleGuess() {
-    if (selection == undefined) {
-      console.error("Invalid Character");
-      return;
-    }
-    setGuesses((prev) => {
-      return [...prev, { selectionIndex: selection }];
-    });
-    if (selection == answer) {
-      setIsCorrect(true);
-    } else if (guesses.length + 1 >= NUM_ATTEMPS) setIsCorrect(false);
-  }
-
+  const { answer, guesses, isCorrect, addGuess } = useGuesses();
   return (
     <div className="App">
       <header className="App-header">
@@ -71,10 +52,9 @@ function App() {
               );
             })}
           </Select>
-
           <Button
             type="primary"
-            onClick={handleGuess}
+            onClick={() => addGuess(selection)}
             disabled={
               isCorrect ||
               guesses.length >= NUM_ATTEMPS ||
