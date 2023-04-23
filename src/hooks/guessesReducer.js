@@ -1,6 +1,6 @@
 import {
   getTodaysGuesses,
-  getTodaysResult,
+  getTodaysScore,
   saveGuesses,
 } from "../utils/localStorage";
 
@@ -18,18 +18,18 @@ const guessesReducer = (state, action) => {
       return {
         ...state,
         guesses: getTodaysGuesses(action.payload.todayInt, history),
-        isCorrect: getTodaysResult(action.payload.todayInt, history) > 0,
+        isCorrect: getTodaysScore(action.payload.todayInt, history) > 0,
       };
 
     case GUESSES_REDUCER_ACTIONS.ADD_GUESS: {
       const newGuesses = [...state.guesses, action.payload.guess];
-      const newResult = action.payload.isCorrect ? newGuesses.length : -1;
+      const newScore = action.payload.isCorrect ? newGuesses.length : -1;
       // Save to localStorage
       const storedHistory = localStorage.getItem("guessesHistory");
       const history = storedHistory ? JSON.parse(storedHistory) : {};
       history[action.payload.todayInt] = {
         guesses: newGuesses,
-        result: newResult,
+        score: newScore,
       };
       saveGuesses(history);
 
