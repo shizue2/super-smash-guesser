@@ -16,7 +16,7 @@ const initialState = {
 const useGuesses = () => {
   const todayInt = useMemo(() => getTodaysInt(), []);
   const [state, dispatch] = useReducer(guessesReducer, initialState);
-  const { guesses, isCorrect } = state;
+  const { guesses, isCorrect, history } = state;
 
   const answer = useMemo(() => {
     const randomGen = rand.create(todayInt.toString());
@@ -52,7 +52,7 @@ const useGuesses = () => {
     [answer, todayInt]
   );
 
-  return { answer, guesses, isCorrect, addGuess };
+  return { answer, guesses, isCorrect, history, addGuess };
 };
 
 export default useGuesses;
