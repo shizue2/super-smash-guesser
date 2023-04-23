@@ -1,4 +1,4 @@
-export const CHARACTERS = [
+const RAW_CHARACTERS = [
   {
     name: "Mario",
     company: "Nintendo",
@@ -766,3 +766,7 @@ export const CHARACTERS = [
     image_url: "/character-images/Sora.png",
   },
 ];
+
+export const CHARACTERS = Object.values(RAW_CHARACTERS).map((value, i) => {
+  return { ...value, id: i };
+});
