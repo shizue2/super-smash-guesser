@@ -42,7 +42,6 @@ export function Grid({ answer, guesses }) {
               ATTRIBUTE_INDEX[col] === ATTRIBUTES.INITIAL_RELEASE && answered
                 ? releaseYearFunction(
                     CHARACTERS[guesses[row]]?.[ATTRIBUTE_INDEX[col]],
-                    CHARACTERS[guesses[row]]?.[ATTRIBUTE_INDEX[col]],
                     answer
                   )
                 : CHARACTERS[guesses[row]]?.[ATTRIBUTE_INDEX[col]];
