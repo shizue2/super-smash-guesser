@@ -2,7 +2,6 @@ import "./App.css";
 import CharacterSelection from "./components/CharacterSelection";
 import { Grid } from "./components/Grid";
 import HistoryStatistics from "./components/HistoryStatistics";
-import { ATTRIBUTES } from "./const/attributes";
 import { CHARACTERS } from "./const/characters";
 import { NUM_ATTEMPS } from "./const/settings";
 import useGuesses from "./hooks/useGuesses";

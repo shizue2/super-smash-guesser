@@ -35,7 +35,9 @@ export function Grid({ answer, guesses }) {
               : "";
             const showImage =
               ATTRIBUTE_INDEX[col] === ATTRIBUTES.NAME && answered;
-
+            const imageUrl = `${process.env.PUBLIC_URL}${
+              CHARACTERS[guesses[row]]?.image_url
+            }`;
             const value =
               ATTRIBUTE_INDEX[col] === ATTRIBUTES.INITIAL_RELEASE && answered
                 ? releaseYearFunction(
