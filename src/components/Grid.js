@@ -6,10 +6,30 @@ import {
 import { CHARACTERS } from "../const/characters";
 import { NUM_ATTEMPS } from "../const/settings";
 import { releaseYearFunction } from "../utils/releaseYearFunction";
+import React, { useState, useEffect } from "react";
 
 export function Grid({ answer, guesses }) {
   const rows = Array.from(Array(NUM_ATTEMPS).keys());
   const cols = Array.from(Array(Object.keys(ATTRIBUTES).length).keys());
+  const [flipState, setFlipState] = useState([]);
+
+  useEffect(() => {
+    if (guesses.length === 0) return;
+
+    setFlipState((prevFlipState) => {
+      const newFlipState = [...prevFlipState];
+      newFlipState[guesses.length - 1] = true;
+      return newFlipState;
+    });
+    const timeoutId = setTimeout(() => {
+      setFlipState((prevFlipState) => {
+        const newFlipState = [...prevFlipState];
+        newFlipState[guesses.length - 1] = false;
+        return newFlipState;
+      });
+    }, 1000);
+    return () => clearTimeout(timeoutId);
+  }, [guesses]);
 
   return (
     <div>
@@ -25,9 +45,8 @@ export function Grid({ answer, guesses }) {
           {cols.map((col) => {
             const answered = guesses[row] != undefined;
             const correct =
-              CHARACTERS[guesses[row]]?.[
-                ATTRIBUTE_INDEX[col]
-              ] === CHARACTERS[answer]?.[ATTRIBUTE_INDEX[col]];
+              CHARACTERS[guesses[row]]?.[ATTRIBUTE_INDEX[col]] ===
+              CHARACTERS[answer]?.[ATTRIBUTE_INDEX[col]];
             const additionalClassName = answered
               ? correct
                 ? "green"
@@ -39,30 +58,56 @@ export function Grid({ answer, guesses }) {
             const value =
               ATTRIBUTE_INDEX[col] === ATTRIBUTES.INITIAL_RELEASE && answered
                 ? releaseYearFunction(
-                    CHARACTERS[guesses[row]]?.[
-                      ATTRIBUTE_INDEX[col]
-                    ],
+                    CHARACTERS[guesses[row]]?.[ATTRIBUTE_INDEX[col]],
                     answer
                   )
-                : CHARACTERS[guesses[row]]?.[
-                    ATTRIBUTE_INDEX[col]
-                  ];
+                : CHARACTERS[guesses[row]]?.[ATTRIBUTE_INDEX[col]];
+            const imageUrl = `${process.env.PUBLIC_URL}${
+              CHARACTERS[guesses[row]]?.image_url
+            }`;
             return (
-              <div className={`square ${additionalClassName}`} key={col}>
+              <div
+                className={`square ${additionalClassName} ${
+                  flipState[row] ? "flip" : ""
+                }`}
+                key={col}
+              >
                 {showImage ? (
                   <img
                     src={`${process.env.PUBLIC_URL}${
                       CHARACTERS[guesses[row]]?.image_url
                     }`}
-                    alt={
-                      CHARACTERS[guesses[row]]?.[
-                        ATTRIBUTE_INDEX[col]
-                      ]
-                    }
+                    alt={CHARACTERS[guesses[row]]?.[ATTRIBUTE_INDEX[col]]}
                     className="character-image-column"
                   />
                 ) : (
                   value
+                )}
+                {flipState[row] && (
+                  <div className="flip-cover">
+                    {showImage ? (
+                      <img
+                        src={`${process.env.PUBLIC_URL}${
+                          CHARACTERS[guesses[row]]?.image_url
+                        }`}
+                        alt={CHARACTERS[guesses[row]]?.[ATTRIBUTE_INDEX[col]]}
+                        className="character-image-column"
+                      />
+                    ) : (
+                      value
+                    )}
+                    {showImage ? (
+                      <img
+                        src={`${process.env.PUBLIC_URL}${
+                          CHARACTERS[guesses[row]]?.image_url
+                        }`}
+                        alt={CHARACTERS[guesses[row]]?.[ATTRIBUTE_INDEX[col]]}
+                        className="character-image-column"
+                      />
+                    ) : (
+                      value
+                    )}
+                  </div>
                 )}
               </div>
             );
