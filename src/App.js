@@ -2,6 +2,7 @@ import { Button, Select } from "antd";
 import { useState } from "react";
 import "./App.css";
 import { Grid } from "./components/Grid";
+import HistoryStatistics from "./components/HistoryStatistics";
 import { ATTRIBUTES } from "./const/attributes";
 import { CHARACTERS } from "./const/characters";
 import { NUM_ATTEMPS } from "./const/settings";
@@ -9,11 +10,14 @@ import useGuesses from "./hooks/useGuesses";
 
 function App() {
   const [selection, setSelection] = useState();
-  const { answer, guesses, isCorrect, addGuess } = useGuesses();
+  const { answer, guesses, isCorrect, history, addGuess } = useGuesses();
   return (
     <div className="App">
       <header className="App-header">
-        <p>Smashle</p>
+        <div className="row" style={{ gap: 12 }}>
+          <p>Smashle</p>
+          <HistoryStatistics history={history}/>
+        </div>
       </header>
       <div className="App-body">
         <Grid answer={answer} guesses={guesses} />

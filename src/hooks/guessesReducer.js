@@ -19,6 +19,7 @@ const guessesReducer = (state, action) => {
         ...state,
         guesses: getTodaysGuesses(action.payload.todayInt, history),
         isCorrect: getTodaysScore(action.payload.todayInt, history) > 0,
+        history: history,
       };
 
     case GUESSES_REDUCER_ACTIONS.ADD_GUESS: {
@@ -38,6 +39,7 @@ const guessesReducer = (state, action) => {
         ...state,
         guesses: newGuesses,
         isCorrect: action.payload.isCorrect,
+        history: history,
       };
     }
     default:
