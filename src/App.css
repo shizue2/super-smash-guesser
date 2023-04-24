@@ -36,6 +36,7 @@ p {
   display: flex;
   direction: row;
   align-items: center;
+  perspective: 1000px;
 }
 
 .attribute {
@@ -57,6 +58,8 @@ p {
   display: flex;
   align-items: center;
   justify-content: center;
+  transform-style: preserve-3d;
+  overflow: hidden;
 }
 
 .red {
@@ -77,6 +80,40 @@ p {
 }
 
 .character-image-column{
-  width: 90px;
-  height: 100px;
+  width: 85px;
+  height: 85px;
+}
+
+.flip-cover {
+  position: absolute;
+  width: 85px;
+  height: 85px;
+  backface-visibility: hidden;
+  transform: rotateY(180deg);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+
+
+
+
+.square.flip {
+  animation: flip 1s;
+}
+
+.square {
+  perspective: 1000px;
+  overflow: hidden;
+}
+
+
+@keyframes flip {
+  0% {
+    transform: rotateY(0deg);
+  }
+  100% {
+    transform: rotateY(180deg);
+    }
 }
