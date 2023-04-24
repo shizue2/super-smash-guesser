@@ -36,7 +36,7 @@ const useGuesses = () => {
 
   const addGuess = useCallback(
     (guess) => {
-      if (guess === undefined) {
+      if (guess == undefined || guesses.includes(guess)) {
         console.error("Invalid Character");
         return;
       }
@@ -49,7 +49,7 @@ const useGuesses = () => {
         },
       });
     },
-    [answer, todayInt]
+    [answer, todayInt, guesses]
   );
 
   return { answer, guesses, isCorrect, history, addGuess };
