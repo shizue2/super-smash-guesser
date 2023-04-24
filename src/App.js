@@ -1,12 +1,14 @@
 import "./App.css";
 import CharacterSelection from "./components/CharacterSelection";
 import { Grid } from "./components/Grid";
+import HistoryStatistics from "./components/HistoryStatistics";
+import { ATTRIBUTES } from "./const/attributes";
 import { CHARACTERS } from "./const/characters";
 import { NUM_ATTEMPS } from "./const/settings";
 import useGuesses from "./hooks/useGuesses";
 
 function App() {
-  const { answer, guesses, isCorrect, addGuess } = useGuesses();
+  const { answer, guesses, isCorrect, history, addGuess } = useGuesses();
   return (
     <div className="App">
       <header className="App-header">
