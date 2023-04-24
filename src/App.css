@@ -14,6 +14,8 @@ p {
 
 .App-header {
   border-bottom: 1.5px grey solid;
+  display: flex;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
   font-size: calc(10px + 2vmin);

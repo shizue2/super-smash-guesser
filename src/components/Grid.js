@@ -40,12 +40,10 @@ export function Grid({ answer, guesses }) {
               ATTRIBUTE_INDEX[col] === ATTRIBUTES.INITIAL_RELEASE && answered
                 ? releaseYearFunction(
                     CHARACTERS[guesses[row]]?.[ATTRIBUTE_INDEX[col]],
+                    CHARACTERS[guesses[row]]?.[ATTRIBUTE_INDEX[col]],
                     answer
                   )
                 : CHARACTERS[guesses[row]]?.[ATTRIBUTE_INDEX[col]];
-            const imageUrl = `${process.env.PUBLIC_URL}${
-              CHARACTERS[guesses[row]]?.image_url
-            }`;
             return (
               <div class={`flip-container ${answered ? "flip" : ""}`}>
                 <div class="flip-inner">

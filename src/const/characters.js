@@ -1,4 +1,4 @@
-export const CHARACTERS = [
+const RAW_CHARACTERS = [
   {
     name: "Mario",
     company: "Nintendo",
@@ -6,7 +6,7 @@ export const CHARACTERS = [
     initial_release_year: "1981",
     gender: "Male",
     range_type: "Close-range",
-    image_url: "/Character-images/Mario.png",
+    image_url: "/character-images/Mario.png",
   },
   {
     name: "Donkey Kong",
@@ -15,7 +15,7 @@ export const CHARACTERS = [
     initial_release_year: "1981",
     gender: "Male",
     range_type: "Mid-range",
-    image_url: "/Character-images/Donkey_Kong.png",
+    image_url: "/character-images/Donkey_Kong.png",
   },
   {
     name: "Link",
@@ -24,7 +24,7 @@ export const CHARACTERS = [
     initial_release_year: "1986",
     gender: "Male",
     range_type: "Mid-range",
-    image_url: "/Character-images/Link.png",
+    image_url: "/character-images/Link.png",
   },
   {
     name: "Samus",
@@ -33,7 +33,7 @@ export const CHARACTERS = [
     initial_release_year: "1986",
     gender: "Female",
     range_type: "Long-range",
-    image_url: "/Character-images/Samus.png",
+    image_url: "/character-images/Samus.png",
   },
   {
     name: "Yoshi",
@@ -42,7 +42,7 @@ export const CHARACTERS = [
     initial_release_year: "1990",
     gender: "Male",
     range_type: "Close-range",
-    image_url: "/Character-images/Yoshi.png",
+    image_url: "/character-images/Yoshi.png",
   },
   {
     name: "Kirby",
@@ -51,7 +51,7 @@ export const CHARACTERS = [
     initial_release_year: "1992",
     gender: "Male",
     range_type: "Close-range",
-    image_url: "/Character-images/Kirby.png",
+    image_url: "/character-images/Kirby.png",
   },
   {
     name: "Fox",
@@ -60,7 +60,7 @@ export const CHARACTERS = [
     initial_release_year: "1993",
     gender: "Male",
     range_type: "Long-range",
-    image_url: "/Character-images/Fox.png",
+    image_url: "/character-images/Fox.png",
   },
   {
     name: "Pikachu",
@@ -69,7 +69,7 @@ export const CHARACTERS = [
     initial_release_year: "1996",
     gender: "Varies",
     range_type: "Mid-range",
-    image_url: "/Character-images/Pikachu.png",
+    image_url: "/character-images/Pikachu.png",
   },
   {
     name: "Luigi",
@@ -78,7 +78,7 @@ export const CHARACTERS = [
     initial_release_year: "1983",
     gender: "Male",
     range_type: "Close-range",
-    image_url: "/Character-images/Luigi.png",
+    image_url: "/character-images/Luigi.png",
   },
   {
     name: "Ness",
@@ -87,7 +87,7 @@ export const CHARACTERS = [
     initial_release_year: "1994",
     gender: "Male",
     range_type: "Mid-range",
-    image_url: "/Character-images/Ness.png",
+    image_url: "/character-images/Ness.png",
   },
   {
     name: "Captain Falcon",
@@ -96,7 +96,7 @@ export const CHARACTERS = [
     initial_release_year: "1990",
     gender: "Male",
     range_type: "Close-range",
-    image_url: "/Character-images/Captain_Falcon.png",
+    image_url: "/character-images/Captain_Falcon.png",
   },
   {
     name: "Jigglypuff",
@@ -105,7 +105,7 @@ export const CHARACTERS = [
     initial_release_year: "1996",
     gender: "Varies",
     range_type: "Close-range",
-    image_url: "/Character-images/Jigglypuff.png",
+    image_url: "/character-images/Jigglypuff.png",
   },
   {
     name: "Peach",
@@ -114,7 +114,7 @@ export const CHARACTERS = [
     initial_release_year: "1985",
     gender: "Female",
     range_type: "Close-range",
-    image_url: "/Character-images/Peach.png",
+    image_url: "/character-images/Peach.png",
   },
   {
     name: "Daisy",
@@ -123,7 +123,7 @@ export const CHARACTERS = [
     initial_release_year: "1989",
     gender: "Female",
     range_type: "Close-range",
-    image_url: "/Character-images/Daisy.png",
+    image_url: "/character-images/Daisy.png",
   },
   {
     name: "Bowser",
@@ -132,7 +132,7 @@ export const CHARACTERS = [
     initial_release_year: "1985",
     gender: "Male",
     range_type: "Close-range",
-    image_url: "/Character-images/Bowser.png",
+    image_url: "/character-images/Bowser.png",
   },
   {
     name: "Ice Climbers",
@@ -141,7 +141,7 @@ export const CHARACTERS = [
     initial_release_year: "1985",
     gender: "Varies",
     range_type: "Close-range",
-    image_url: "/Character-images/Ice_Climbers.png",
+    image_url: "/character-images/Ice_Climbers.png",
   },
   {
     name: "Sheik",
@@ -150,7 +150,7 @@ export const CHARACTERS = [
     initial_release_year: "1998",
     gender: "Female",
     range_type: "Close-range",
-    image_url: "/Character-images/Sheik.png",
+    image_url: "/character-images/Sheik.png",
   },
   {
     name: "Zelda",
@@ -159,7 +159,7 @@ export const CHARACTERS = [
     initial_release_year: "1986",
     gender: "Female",
     range_type: "Mid-range",
-    image_url: "/Character-images/Zelda.png",
+    image_url: "/character-images/Zelda.png",
   },
   {
     name: "Dr. Mario",
@@ -168,7 +168,7 @@ export const CHARACTERS = [
     initial_release_year: "1990",
     gender: "Male",
     range_type: "Close-range",
-    image_url: "/Character-images/Dr._Mario.png",
+    image_url: "/character-images/Dr._Mario.png",
   },
   {
     name: "Pichu",
@@ -177,7 +177,7 @@ export const CHARACTERS = [
     initial_release_year: "2000",
     gender: "Varies",
     range_type: "Mid-range",
-    image_url: "/Character-images/Pichu.png",
+    image_url: "/character-images/Pichu.png",
   },
   {
     name: "Falco",
@@ -186,7 +186,7 @@ export const CHARACTERS = [
     initial_release_year: "1997",
     gender: "Male",
     range_type: "Long-range",
-    image_url: "/Character-images/Falco.png",
+    image_url: "/character-images/Falco.png",
   },
   {
     name: "Marth",
@@ -195,7 +195,7 @@ export const CHARACTERS = [
     initial_release_year: "1990",
     gender: "Male",
     range_type: "Close-range",
-    image_url: "/Character-images/Marth.png",
+    image_url: "/character-images/Marth.png",
   },
   {
     name: "Lucina",
@@ -204,7 +204,7 @@ export const CHARACTERS = [
     initial_release_year: "2012",
     gender: "Female",
     range_type: "Close-range",
-    image_url: "/Character-images/Lucina.png",
+    image_url: "/character-images/Lucina.png",
   },
   {
     name: "Young Link",
@@ -213,7 +213,7 @@ export const CHARACTERS = [
     initial_release_year: "2000",
     gender: "Male",
     range_type: "Mid-range",
-    image_url: "/Character-images/Young_Link.png",
+    image_url: "/character-images/Young_Link.png",
   },
   {
     name: "Ganondorf",
@@ -222,7 +222,7 @@ export const CHARACTERS = [
     initial_release_year: "1998",
     gender: "Male",
     range_type: "Close-range",
-    image_url: "/Character-images/Ganondorf.png",
+    image_url: "/character-images/Ganondorf.png",
   },
   {
     name: "Mewtwo",
@@ -231,7 +231,7 @@ export const CHARACTERS = [
     initial_release_year: "1996",
     gender: "Varies",
     range_type: "Mid-range",
-    image_url: "/Character-images/Mewtwo.png",
+    image_url: "/character-images/Mewtwo.png",
   },
   {
     name: "Roy",
@@ -240,7 +240,7 @@ export const CHARACTERS = [
     initial_release_year: "2002",
     gender: "Male",
     range_type: "Close-range",
-    image_url: "/Character-images/Roy.png",
+    image_url: "/character-images/Roy.png",
   },
   {
     name: "Chrom",
@@ -249,7 +249,7 @@ export const CHARACTERS = [
     initial_release_year: "2012",
     gender: "Male",
     range_type: "Close-range",
-    image_url: "/Character-images/Chrom.png",
+    image_url: "/character-images/Chrom.png",
   },
   {
     name: "Mr. Game & Watch",
@@ -258,7 +258,7 @@ export const CHARACTERS = [
     initial_release_year: "1980",
     gender: "Varies",
     range_type: "Mid-range",
-    image_url: "/Character-images/Mr._Game_&_Watch.png",
+    image_url: "/character-images/Mr._Game_&_Watch.png",
   },
   {
     name: "Meta Knight",
@@ -267,7 +267,7 @@ export const CHARACTERS = [
     initial_release_year: "1993",
     gender: "Male",
     range_type: "Close-range",
-    image_url: "/Character-images/Meta_Knight.png",
+    image_url: "/character-images/Meta_Knight.png",
   },
   {
     name: "Pit",
@@ -276,7 +276,7 @@ export const CHARACTERS = [
     initial_release_year: "1986",
     gender: "Male",
     range_type: "Mid-range",
-    image_url: "/Character-images/Pit.png",
+    image_url: "/character-images/Pit.png",
   },
   {
     name: "Dark Pit",
@@ -285,7 +285,7 @@ export const CHARACTERS = [
     initial_release_year: "2012",
     gender: "Male",
     range_type: "Mid-range",
-    image_url: "/Character-images/Dark_Pit.png",
+    image_url: "/character-images/Dark_Pit.png",
   },
   {
     name: "Zero Suit Samus",
@@ -294,7 +294,7 @@ export const CHARACTERS = [
     initial_release_year: "2004",
     gender: "Female",
     range_type: "Mid-range",
-    image_url: "/Character-images/Zero_Suit_Samus.png",
+    image_url: "/character-images/Zero_Suit_Samus.png",
   },
   {
     name: "Wario",
@@ -303,7 +303,7 @@ export const CHARACTERS = [
     initial_release_year: "1992",
     gender: "Male",
     range_type: "Close-range",
-    image_url: "/Character-images/Wario.png",
+    image_url: "/character-images/Wario.png",
   },
   {
     name: "Snake",
@@ -312,7 +312,7 @@ export const CHARACTERS = [
     initial_release_year: "1987",
     gender: "Male",
     range_type: "Long-range",
-    image_url: "/Character-images/Snake.png",
+    image_url: "/character-images/Snake.png",
   },
   {
     name: "Ike",
@@ -321,7 +321,7 @@ export const CHARACTERS = [
     initial_release_year: "2005",
     gender: "Male",
     range_type: "Close-range",
-    image_url: "/Character-images/Ike.png",
+    image_url: "/character-images/Ike.png",
   },
   {
     name: "Pokemon Trainer",
@@ -330,7 +330,7 @@ export const CHARACTERS = [
     initial_release_year: "1996",
     gender: "Varies",
     range_type: "Mid-range",
-    image_url: "/Character-images/Pokémon_Trainer.png",
+    image_url: "/character-images/Pokémon_Trainer.png",
   },
   {
     name: "Diddy Kong",
@@ -339,7 +339,7 @@ export const CHARACTERS = [
     initial_release_year: "1994",
     gender: "Male",
     range_type: "Close-range",
-    image_url: "/Character-images/Diddy_Kong.png",
+    image_url: "/character-images/Diddy_Kong.png",
   },
   {
     name: "Lucas",
@@ -348,7 +348,7 @@ export const CHARACTERS = [
     initial_release_year: "2006",
     gender: "Male",
     range_type: "Mid-range",
-    image_url: "/Character-images/Lucas.png",
+    image_url: "/character-images/Lucas.png",
   },
   {
     name: "Sonic",
@@ -357,7 +357,7 @@ export const CHARACTERS = [
     initial_release_year: "1991",
     gender: "Male",
     range_type: "Close-range",
-    image_url: "/Character-images/Sonic.png",
+    image_url: "/character-images/Sonic.png",
   },
   {
     name: "King Dedede",
@@ -366,7 +366,7 @@ export const CHARACTERS = [
     initial_release_year: "1992",
     gender: "Male",
     range_type: "Close-range",
-    image_url: "/Character-images/King_Dedede.png",
+    image_url: "/character-images/King_Dedede.png",
   },
   {
     name: "Olimar",
@@ -375,7 +375,7 @@ export const CHARACTERS = [
     initial_release_year: "2001",
     gender: "Male",
     range_type: "Mid-range",
-    image_url: "/Character-images/Olimar.png",
+    image_url: "/character-images/Olimar.png",
   },
   {
     name: "Lucario",
@@ -384,7 +384,7 @@ export const CHARACTERS = [
     initial_release_year: "2006",
     gender: "Varies",
     range_type: "Mid-range",
-    image_url: "/Character-images/Lucario.png",
+    image_url: "/character-images/Lucario.png",
   },
   {
     name: "R.O.B.",
@@ -393,7 +393,7 @@ export const CHARACTERS = [
     initial_release_year: "1985",
     gender: "Varies",
     range_type: "Mid-range",
-    image_url: "/Character-images/R.O.B..png",
+    image_url: "/character-images/R.O.B..png",
   },
   {
     name: "Toon Link",
@@ -402,7 +402,7 @@ export const CHARACTERS = [
     initial_release_year: "2002",
     gender: "Male",
     range_type: "Mid-range",
-    image_url: "/Character-images/Toon_Link.png",
+    image_url: "/character-images/Toon_Link.png",
   },
   {
     name: "Wolf",
@@ -411,7 +411,7 @@ export const CHARACTERS = [
     initial_release_year: "1997",
     gender: "Male",
     range_type: "Mid-range",
-    image_url: "/Character-images/Wolf.png",
+    image_url: "/character-images/Wolf.png",
   },
   {
     name: "Villager",
@@ -420,7 +420,7 @@ export const CHARACTERS = [
     initial_release_year: "2001",
     gender: "Varies",
     range_type: "Close-range",
-    image_url: "/Character-images/Villager.png",
+    image_url: "/character-images/Villager.png",
   },
   {
     name: "Mega Man",
@@ -429,7 +429,7 @@ export const CHARACTERS = [
     initial_release_year: "1987",
     gender: "Male",
     range_type: "Long-range",
-    image_url: "/Character-images/Mega_Man.png",
+    image_url: "/character-images/Mega_Man.png",
   },
   {
     name: "Wii Fit Trainer",
@@ -438,7 +438,7 @@ export const CHARACTERS = [
     initial_release_year: "2007",
     gender: "Varies",
     range_type: "Close-range",
-    image_url: "/Character-images/Wii_Fit_Trainer.png",
+    image_url: "/character-images/Wii_Fit_Trainer.png",
   },
   {
     name: "Rosalina & Luma",
@@ -447,7 +447,7 @@ export const CHARACTERS = [
     initial_release_year: "2007",
     gender: "Female",
     range_type: "Mid-range",
-    image_url: "/Character-images/Rosalina.png",
+    image_url: "/character-images/Rosalina.png",
   },
   {
     name: "Little Mac",
@@ -456,7 +456,7 @@ export const CHARACTERS = [
     initial_release_year: "1983",
     gender: "Male",
     range_type: "Close-range",
-    image_url: "/Character-images/Little_Mac.png",
+    image_url: "/character-images/Little_Mac.png",
   },
   {
     name: "Greninja",
@@ -465,7 +465,7 @@ export const CHARACTERS = [
     initial_release_year: "2013",
     gender: "Varies",
     range_type: "Close-range",
-    image_url: "/Character-images/Greninja.png",
+    image_url: "/character-images/Greninja.png",
   },
   {
     name: "Mii Brawler",
@@ -474,7 +474,7 @@ export const CHARACTERS = [
     initial_release_year: "2006",
     gender: "Varies",
     range_type: "Close-range",
-    image_url: "/Character-images/Mii_Brawler.png",
+    image_url: "/character-images/Mii_Brawler.png",
   },
   {
     name: "Mii Swordfighter",
@@ -483,7 +483,7 @@ export const CHARACTERS = [
     initial_release_year: "2006",
     gender: "Varies",
     range_type: "Mid-range",
-    image_url: "/Character-images/Mii_Swordfighter.png",
+    image_url: "/character-images/Mii_Swordfighter.png",
   },
   {
     name: "Mii Gunner",
@@ -492,7 +492,7 @@ export const CHARACTERS = [
     initial_release_year: "2006",
     gender: "Varies",
     range_type: "Long-range",
-    image_url: "/Character-images/Mii_Gunner.png",
+    image_url: "/character-images/Mii_Gunner.png",
   },
 
   {
@@ -502,7 +502,7 @@ export const CHARACTERS = [
     initial_release_year: "1986",
     gender: "Female",
     range_type: "Mid-range",
-    image_url: "/Character-images/Palutena.png",
+    image_url: "/character-images/Palutena.png",
   },
   {
     name: "Pac-Man",
@@ -511,7 +511,7 @@ export const CHARACTERS = [
     initial_release_year: "1980",
     gender: "Male",
     range_type: "Mid-range",
-    image_url: "/Character-images/PAC-MAN.png",
+    image_url: "/character-images/PAC-MAN.png",
   },
   {
     name: "Robin",
@@ -520,7 +520,7 @@ export const CHARACTERS = [
     initial_release_year: "2012",
     gender: "Varies",
     range_type: "Mid-range",
-    image_url: "/Character-images/Robin.png",
+    image_url: "/character-images/Robin.png",
   },
   {
     name: "Shulk",
@@ -529,7 +529,7 @@ export const CHARACTERS = [
     initial_release_year: "2010",
     gender: "Male",
     range_type: "Mid-range",
-    image_url: "/Character-images/Shulk.png",
+    image_url: "/character-images/Shulk.png",
   },
   {
     name: "Bowser Jr.",
@@ -538,7 +538,7 @@ export const CHARACTERS = [
     initial_release_year: "2002",
     gender: "Male",
     range_type: "Close-range",
-    image_url: "/Character-images/Bowser_Jr..png",
+    image_url: "/character-images/Bowser_Jr..png",
   },
   {
     name: "Duck Hunt",
@@ -547,7 +547,7 @@ export const CHARACTERS = [
     initial_release_year: "1984",
     gender: "Varies",
     range_type: "Long-range",
-    image_url: "/Character-images/Duck_Hunt.png",
+    image_url: "/character-images/Duck_Hunt.png",
   },
   {
     name: "Ryu",
@@ -556,7 +556,7 @@ export const CHARACTERS = [
     initial_release_year: "1987",
     gender: "Male",
     range_type: "Close-range",
-    image_url: "/Character-images/Ryu.png",
+    image_url: "/character-images/Ryu.png",
   },
   {
     name: "Ken",
@@ -565,7 +565,7 @@ export const CHARACTERS = [
     initial_release_year: "1987",
     gender: "Male",
     range_type: "Close-range",
-    image_url: "/Character-images/Ken.png",
+    image_url: "/character-images/Ken.png",
   },
   {
     name: "Cloud",
@@ -574,7 +574,7 @@ export const CHARACTERS = [
     initial_release_year: "1997",
     gender: "Male",
     range_type: "Mid-range",
-    image_url: "/Character-images/Cloud.png",
+    image_url: "/character-images/Cloud.png",
   },
   {
     name: "Corrin",
@@ -583,7 +583,7 @@ export const CHARACTERS = [
     initial_release_year: "2015",
     gender: "Varies",
     range_type: "Close-range",
-    image_url: "/Character-images/Corrin.png",
+    image_url: "/character-images/Corrin.png",
   },
   {
     name: "Bayonetta",
@@ -592,7 +592,7 @@ export const CHARACTERS = [
     initial_release_year: "2009",
     gender: "Female",
     range_type: "Close-range",
-    image_url: "/Character-images/Bayonetta.png",
+    image_url: "/character-images/Bayonetta.png",
   },
   {
     name: "Inkling",
@@ -601,7 +601,7 @@ export const CHARACTERS = [
     initial_release_year: "2015",
     gender: "Varies",
     range_type: "Close-range",
-    image_url: "/Character-images/Inkling.png",
+    image_url: "/character-images/Inkling.png",
   },
   {
     name: "Ridley",
@@ -610,7 +610,7 @@ export const CHARACTERS = [
     initial_release_year: "1986",
     gender: "Male",
     range_type: "Close-range",
-    image_url: "/Character-images/Ridley.png",
+    image_url: "/character-images/Ridley.png",
   },
   {
     name: "Simon Belmont",
@@ -619,7 +619,7 @@ export const CHARACTERS = [
     initial_release_year: "1986",
     gender: "Male",
     range_type: "Mid-range",
-    image_url: "/Character-images/Simon.png",
+    image_url: "/character-images/Simon.png",
   },
   {
     name: "Richter",
@@ -628,7 +628,7 @@ export const CHARACTERS = [
     initial_release_year: "1993",
     gender: "Male",
     range_type: "Mid-range",
-    image_url: "/Character-images/Richter.png",
+    image_url: "/character-images/Richter.png",
   },
   {
     name: "King K. Rool",
@@ -637,7 +637,7 @@ export const CHARACTERS = [
     initial_release_year: "1994",
     gender: "Male",
     range_type: "Close-range",
-    image_url: "/Character-images/King_K_Rool.png",
+    image_url: "/character-images/King_K_Rool.png",
   },
   {
     name: "Isabelle",
@@ -646,7 +646,7 @@ export const CHARACTERS = [
     initial_release_year: "2012",
     gender: "Female",
     range_type: "Mid-range",
-    image_url: "/Character-images/Isabelle.png",
+    image_url: "/character-images/Isabelle.png",
   },
   {
     name: "Incineroar",
@@ -655,7 +655,7 @@ export const CHARACTERS = [
     initial_release_year: "2016",
     gender: "Varies",
     range_type: "Close-range",
-    image_url: "/Character-images/Incineroar.png",
+    image_url: "/character-images/Incineroar.png",
   },
   {
     name: "Piranha Plant",
@@ -664,7 +664,7 @@ export const CHARACTERS = [
     initial_release_year: "1985",
     gender: "Varies",
     range_type: "Close-range",
-    image_url: "/Character-images/Piranha_Plant.png",
+    image_url: "/character-images/Piranha_Plant.png",
   },
   {
     name: "Joker",
@@ -673,7 +673,7 @@ export const CHARACTERS = [
     initial_release_year: "2016",
     gender: "Male",
     range_type: "Mid-range",
-    image_url: "/Character-images/Joker.png",
+    image_url: "/character-images/Joker.png",
   },
   {
     name: "Hero",
@@ -682,7 +682,7 @@ export const CHARACTERS = [
     initial_release_year: "1986",
     gender: "Varies",
     range_type: "Mid-range",
-    image_url: "/Character-images/Hero.png",
+    image_url: "/character-images/Hero.png",
   },
   {
     name: "Banjo & Kazooie",
@@ -691,7 +691,7 @@ export const CHARACTERS = [
     initial_release_year: "1998",
     gender: "Varies",
     range_type: "Close-range",
-    image_url: "/Character-images/Banjo_Kazooie.png",
+    image_url: "/character-images/Banjo_Kazooie.png",
   },
   {
     name: "Terry Bogard",
@@ -700,7 +700,7 @@ export const CHARACTERS = [
     initial_release_year: "1991",
     gender: "Male",
     range_type: "Close-range",
-    image_url: "/Character-images/Terry_Bogard.png",
+    image_url: "/character-images/Terry_Bogard.png",
   },
   {
     name: "Byleth",
@@ -709,7 +709,7 @@ export const CHARACTERS = [
     initial_release_year: "2019",
     gender: "Varies",
     range_type: "Mid-range",
-    image_url: "/Character-images/Byleth.png",
+    image_url: "/character-images/Byleth.png",
   },
   {
     name: "Min Min",
@@ -718,7 +718,7 @@ export const CHARACTERS = [
     initial_release_year: "2017",
     gender: "Female",
     range_type: "Mid-range",
-    image_url: "/Character-images/Min_Min.png",
+    image_url: "/character-images/Min_Min.png",
   },
   {
     name: "Steve",
@@ -727,7 +727,7 @@ export const CHARACTERS = [
     initial_release_year: "2009",
     gender: "Varies",
     range_type: "Mid-range",
-    image_url: "/Character-images/Steve.png",
+    image_url: "/character-images/Steve.png",
   },
   {
     name: "Sephiroth",
@@ -736,7 +736,7 @@ export const CHARACTERS = [
     initial_release_year: "1997",
     gender: "Male",
     range_type: "Mid-range",
-    image_url: "/Character-images/Sephiroth.png",
+    image_url: "/character-images/Sephiroth.png",
   },
   {
     name: "Pyra/Mythra",
@@ -745,7 +745,7 @@ export const CHARACTERS = [
     initial_release_year: "2017",
     gender: "Female",
     range_type: "Close-range",
-    image_url: "/Character-images/Pyra_Mythra.png",
+    image_url: "/character-images/Pyra_Mythra.png",
   },
   {
     name: "Kazuya Mishima",
@@ -754,7 +754,7 @@ export const CHARACTERS = [
     initial_release_year: "1994",
     gender: "Male",
     range_type: "Close-range",
-    image_url: "/Character-images/Kazuya_Mishima.png",
+    image_url: "/character-images/Kazuya_Mishima.png",
   },
   {
     name: "Sora",
@@ -763,6 +763,10 @@ export const CHARACTERS = [
     initial_release_year: "2002",
     gender: "Male",
     range_type: "Close-range",
-    image_url: "/Character-images/Sora.png",
+    image_url: "/character-images/Sora.png",
   },
 ];
+
+export const CHARACTERS = Object.values(RAW_CHARACTERS).map((value, i) => {
+  return { ...value, id: i };
+});
