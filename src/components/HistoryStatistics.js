@@ -31,7 +31,7 @@ function HistoryStatistics({ history }) {
       const winRate = Math.round(
         (scoreHistory.filter((score) => score.score > 0).length * 100) /
           totalGames
-      );
+      ) || 0;
 
       const newScoreDistribution = {};
       scoreHistory.forEach((score) => {
