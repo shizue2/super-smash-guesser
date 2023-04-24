@@ -15,6 +15,7 @@ function CharacterSelection({ isCorrect, guesses, addGuess }) {
     <div className="row">
       <Select
         showSearch
+        value={selection}
         onChange={setSelection}
         style={{ width: 240 }}
         filterOption={(input, option) => {
@@ -48,7 +49,10 @@ function CharacterSelection({ isCorrect, guesses, addGuess }) {
       </Select>
       <Button
         type="primary"
-        onClick={() => addGuess(selection)}
+        onClick={() => {
+          addGuess(selection);
+          setSelection(undefined);
+        }}
         disabled={
           isCorrect || guesses.length >= NUM_ATTEMPS || selection == undefined
         }
