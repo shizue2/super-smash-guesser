@@ -11,6 +11,7 @@ import React from "react";
 export function Grid({ answer, guesses }) {
   const rows = Array.from(Array(NUM_ATTEMPS).keys());
   const cols = Array.from(Array(Object.keys(ATTRIBUTES).length).keys());
+  const delayTime = 0.6;
 
   return (
     <div>
@@ -47,7 +48,12 @@ export function Grid({ answer, guesses }) {
                 : CHARACTERS[guesses[row]]?.[ATTRIBUTE_INDEX[col]];
             return (
               <div class={`flip-container ${answered ? "flip" : ""}`}>
-                <div class="flip-inner">
+                <div
+                  class="flip-inner"
+                  style={{
+                    transitionDelay: answered ? `${delayTime * col}s` : "0s",
+                  }}
+                >
                   <div class="square front"></div>
                   <div class={`square back ${additionalClassName}`}>
                     {showImage ? (
